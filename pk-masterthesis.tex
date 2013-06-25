@@ -417,6 +417,95 @@ Standards zur Erstellung von Webseiten genutzt wird, wird bereits HTML5 genutzt.
 % http://www.instantshift.com/2012/07/20/the-evolution-of-html5-infographic/
 % publishing multimedia on the web.pdf
 
+\section{Rich Media}
+\subsection{Audio}
+MP3 stellt das allgegenwärtige Format zur Kodierung von Audio-Dateien dar. Um sich diese 
+Audio-Dateien auch anhören zu können waren propritäre Technologien notwendig. Damit 
+wurde der Flash Player allgegenwärtig.
+\newline\newline
+Mit HTML5 bietet sich eine neue Technologie an die versucht den Platzhirschen Flash zu
+verdrängen. 
+Das Einbinden einer Audio-Datei in ein HTML5-Dokument ist äußerst simpel:
+\begin{verbatim}
+<audio src="sample.mp3">
+</audio>
+\end{verbatim}
+Das Audio Element bietet mehrer Attribute zum Steuern der Audioausgabe an.
+Das Attribut ``autoplay'' sorgt dafür, dass die Audio-Datei nach vollständigem Laden
+sofort gestartet wird. ``loop'' hingegen, kümmert sich darum, dass das die Audio-Datei
+in einer Endlosschleife abgespielt wird.
+\begin{verbatim}
+<audio src="sample.mp3" autoplay loop>
+</audio>
+\end{verbatim}
+Eine Besonderheit dieser Attribute ist, dass sie im Gegensatz zu den herkömmlichen HTML-Attributen,
+keinen Wert zugewiesen bekommen. Das liegt daran, dass es sich bei diesen Attributen bereits um
+``Boolean''-Attribute handelt. Das zuweisen eines Wertes, z.B. autoplay="no", wird an der Ausführung
+des Attributes nichts ändern - entweder die Attribute werden angegeben und ausgeführt oder
+eben nicht.
+
+\subsection{Video}
+Mit dem anstieg der verfügbaren Bandbreite stieg auch das Interesse an Video Inhalten an.
+Das Flash-Plugin ist derzeit noch die erste Wahl wenn Videos im Web angeboten werden sollen.
+Mit HTML5 könnte sich das ändern.
+\newline\newline
+Das Video-Element funktioniert genauso wie das Audio-Element. Es unterstützt die 
+selben optionalen ``autoplay'', ``loop'' und ``preload'' Attribute. Der Speicherort des Videos
+kann entweder mittels ``src'' Attribut im Video-Element oder mittels ``source'' Elementen, die 
+sich verschachtelt zwischen den sich öffnenden und schließenden <video> Tags befinden, 
+festgelegt werden. Zur Darstellung eines geeigneten User Interfaces kann entweder mittels
+``controls'' Attribut dem der Browser die Darstellung übernehmen lassen oder es wird mit 
+entsprechenden HTML-Elementen, CSS Befehlen und JavaScript ein benutzerdefiniertes erstellt.
+\newline\newline
+Einer der wesentlichen Unterschiede zwischen dem Audio und Video Element ist, dass Videos
+natürlicherweise einen fixen Bereich der Webseite einnehmen werden. Um diesen
+Bereich festzulegen müssen im Video Element die entsprechenden Dimensionen definiert werden:  
+\begin{verbatim}
+<video src="sample.mp4" controls width="360" height="240">
+</video
+\end{verbatim}
+Um beim Laden des Videos kann mittels ``poster'' Attribute dem Browser mitgeteilt werden, 
+währenddessen ein representatives Bild anzuzeigen:
+\begin{verbatim}
+<video src="sample.mp4" controls width="360" height="240" 
+poster="sampleimage.jpg">
+</video
+\end{verbatim}
+% Image Placeholder and Dimensions
+Der Kampf der rivalisierenden Videoformate stellt sich noch extremer als bei den Audio Formaten dar.
+Die am stärksten vertretensten Formate sind das patentierte MP4 und das freie Theora Video. Wie beim
+Audio Element muss das Video in mehreren Kodierungen verfügbar und Notfalls eine Fallback Lösung
+vorhanden sein.
+\begin{verbatim}
+<video controls width="360" height="240" 
+poster="sampleimage.jpg">
+	<source src="sample.ogv" type="video/ogg">
+	<source src="sample.mp4" type="video/mp4">
+	<object type="application/x-shockwave-flash" width="360" height="240" 
+	data="player.swf?file=movie.mp4">
+	<a href="movie.mp4">Video herunterladen</a>
+	</object>
+</video
+\end{verbatim}
+Die Autoren der HTML5 Spezifikation hofften auf eine Standardisierung des Videoformates. Allerdings
+konnten sich die Browserhersteller, bis heute, nicht auf ein einziges Format einigen.
+
+\subsubsection{Native Unterstützung von Videos}
+Die Fähigkeit Videos nativ in Webseiten einzubinden stellt womöglich eine der aufregensten Erweiterung
+von HTML dar, seit der Einführung des ``img'' Elements. Giganten wie Google zögern nicht lange und 
+zeigen bereits ihren Enthusiasmus mit einer auf HTML5 basierenden YouTube-Version: 
+\url{http://youtube.com/HTML5}
+Eines der Probleme von Plug-ins zur Darstellung von Webinhalten ist, dass der Inhalt des Plug-ins 
+von dem restlichen Inhalt der Webseite geschützt ist (``sandboxed''). Nativen Rich Media Elementen
+in HTML haben zur Folge, dass sie ohne Probleme mit den anderen Web-Technologien, 
+CSS und JavaScript, zusammen arbeitet.
+\newline\newline
+Das Video Element ist somit nicht nur programmierbar sondern auch stylebar.
+% Image Skin & Style
+Ein Plug-in bietet derartige Möglichkeiten nicht an.
+
+\subsection{Canvas}
+
 \section{Verfügbarkeit}
 Seit der offiziellen Präsentation der ersten Entwürfe der erneuerten
 Webtechnologie, ist die Begeisterung in der IT Branche groß. Diese Begeisterung
@@ -657,10 +746,6 @@ fügte neue Funktionen zu ActionScript 3.0 hinzu, unter anderem neue 3D Möglichke
 Kontrollfunktionen für Animationen und ActionScript Klassen für Adobe AIR. Flash CS5 und
 Flash CS6 erweiterten die Funktionalitäten unter anderem mit der Unterstützung von Controller und
 anderen Geräten, inklusive Multitouch-Funktionen und Touch-Screen Geräten.
-
-\section{
-
-
 
 
 
