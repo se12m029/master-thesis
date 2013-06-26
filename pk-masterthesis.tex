@@ -444,6 +444,107 @@ keinen Wert zugewiesen bekommen. Das liegt daran, dass es sich bei diesen Attrib
 des Attributes nichts ändern - entweder die Attribute werden angegeben und ausgeführt oder
 eben nicht.
 
+\subsubsection{Audio API}
+Das Boolean-Attribut controls sorgt dafür, dass der Browser die nativen Kontrollmöglichkeiten
+anzeigt und den Usern zu Verfügung stellt. Somit ist es sehr schnell möglich die Audiowiedergabe
+zu Starten/Stoppen, die Position und die Lautstärke zu verändern.
+%Image Audioplayer mit Controls
+Über JavaScript ist es möglich die Audio API zuzugreifen und somit Methoden für Play, Pause und
+Eigenschaften wie Lautstärke zu nutzen. Ein einfaches Beispiel mit Button Elementen und
+Inline Event Handler:
+\begin{verbatim}
+<audio id="player" src="sample.mp3">
+</audio>
+<div>
+	<button onclick="document.getElementById('player').play()">
+		Play
+	</button>
+	<button onclick="document.getElementById('player').pause()">
+		Pause
+	</button>
+	<button onclick="document.getElementById('player').volume += 0.1">
+		Volume Up
+	</button>
+	<button onclick="document.getElementById('player').volume -= 0.1">
+		Volume Down
+	</button>
+</div>
+\end{verbatim}
+
+\subsubsection{Audioformate}
+Obwohl das Audio Element einen sehr guten Eindruck macht gibt es einen Wehrmutstropfen,
+und dieser liegt nicht in der Spezifikation des Elements. Das Problem ist die breite Fragmentierung
+von Audiocodecs. Leider gibt es bezüglich der zu verwendeten Codecs unterschiedliche Meinungen
+unter den Browserherstellern. Während heutzutage das MP3 Format allgegenwärtig ist,
+ist es nach wie vor kein offenes Format. Die Folge ist, dass MP3 Dateien von Applikationen nur 
+dann dekodiert werden können, wenn für die entsprechenden Patentrechte bezahlt wird.
+Für Giganten wie Apple oder Adobe stellt das kein gröberes Problem dar, allerdings erschwert es die 
+Arbeit von kleineren Unternehmen und Open-Source Organisationen. Infolgedessen gibt
+Apples Safari ohne Probleme MP3 Datei wieder während Mozillas Firefox daran scheitert.
+\newline\newline
+Natürlich existieren weitere Audioformate. Der Vobis Codec - auch bekannt unter der Datei-Endung
+.ogg - ist zum Beispiel nicht patentiert. Firefox unterstützt den Codec aber Safari nicht.
+\newline\newline
+Glücklicherweise ist es nicht notwendig eine fixe Entscheidung bei der Auswahl des Codecs zu treffen.
+Anstatt das src Attribut im sich öffnenden <audio> Tag zu nutzen, können mehrere Dateiformate
+über source Elemente festgelegt werden:
+\begin{verbatim}
+<audio controls>
+	<source src="sample.ogg">
+	<source src="sample.mp3">
+</audio>
+\end{verbatim}
+Ein Browser der Ogg Vorbis Datei wiedergeben kann wird sich für die weiteren source Elemente
+nicht mehr interessieren. Ein Browser der MP3 wiedergeben kann aber Ogg Vorbis nicht wird 
+einfach das erste Source Element überspringen und die Datei im zweiten wiedergeben.
+Zusätzliche Hilfe bei der Entscheidung bietet die Deklarierung des entsprechenden 
+Mime Types der Audio Datei:
+\begin{verbatim}
+<audio controls>
+	<source src="sample.ogg" type="audio/ogg">
+	<source src="sample.mp3" type="audio/mpeg">
+</audio>
+\end{verbatim}
+Um die Möglichkeiten vom Audio Element vollständig ausnutzen zu können wird angeraten 
+MP3 und Ogg Vorbis als Codecs zu verwenden.
+
+\subsubsection{Fallback Lösungen}
+Auch wenn das festlegen von mehreren source Elementen sehr nützlich ist, muss 
+bedacht werden, dass Browser existieren die das Audio Element nicht unterstützen.
+Internet Explorer und Konsorten müssen auf die altmodische Art auf ein Flashumsetzung
+zurückgreifen. Glücklicherweise unterstützt das Audie Element die Nutzung von Flash.
+Alles was zwischen den sich öffnenden und schließenden <audio> Tags befindet und
+kein source Element ist wird nur dem Browser, der das audio Element nicht unterstützt, 
+angezeigt:
+\begin{verbatim}
+<audio controls>
+	<source src="sample.ogg" type="audio/ogg">
+	<source src="sample.mp3" type="audio/mpeg">
+	<object type="application/x-shockwave-flash"
+		<param name="movie" value="player.swf?soundFile=sample.mp3">
+	</object>
+</audio>
+\end{verbatim}
+Das object Element bietet zusätzlich eine Möglichkeit an um Fallback Inhalte anzubieten.
+So kann zum Beispiel im schlimmsten Fall ein gewöhnlicher Downloadlink angezeigt werden.
+\begin{verbatim}
+<audio controls>
+	<source src="sample.ogg" type="audio/ogg">
+	<source src="sample.mp3" type="audio/mpeg">
+	<object type="application/x-shockwave-flash"
+		<param name="movie" value="player.swf?soundFile=sample.mp3">
+		<a href="sample.mp3">Audio Datei herunterladen</a>
+	</object>
+</audio>
+\end{verbatim}
+Mit diesem Code werden bereits vier Fallback Ebenen angeboten:
+\begin{itemize}
+	\item{Der Browser unterstützt das Audio Element und den Ogg Vorbis Codec.}
+	\item{Der Browser unterstützt das Audio Element und den MP3 Codec.}
+	\item{Der Browser unterstützt das Audio Element nicht, hat aber das Flash Plug-in installiert.}
+	\item{Der Browser unterstützt das Audio Element nicht und hat kein Flash Plug-in installiert.}
+\end{itemize}
+
 \subsection{Video}
 Mit dem anstieg der verfügbaren Bandbreite stieg auch das Interesse an Video Inhalten an.
 Das Flash-Plugin ist derzeit noch die erste Wahl wenn Videos im Web angeboten werden sollen.
