@@ -1,0 +1,626 @@
+% =Überblick
+\chapter{Überblick}
+% -HTML5 Geschichte
+\section{Die Geschichte von HTML5}
+HTML ist die allgegenwärtige Auszeichnungssprache des World Wide Webs. Durch den geschickten Einsatz der paar Elemente (fortan: Tags) die die Sprache unterstützt, konnten erstaunlich viele unterschiedliche Netzwerke von verlinkten Dokumente erstellt werden. Von bekannten Seiten wie Amazon, Ebay und Wikipedia bis hin zu personalisierten Blogs und Webseiten die sich auf Katzenbilder spezialisiert haben.
+HTML5 ist die aktuellste Version dieser Auszeichnungssprache. Obwohl diese
+Version die bisher umfangreichsten Änderungen mit sich bringt, ist es nicht die
+erste Aktualisierung von HTML.
+Sir Tim Berners-Lee zeichnet sich für die Entwicklung von HTML und damit dem
+Beginn des Internet verantwortlich. 1991 veröffentlichte er ein Dokument mit dem
+Titel ``HTML Tags'', in dem er weniger als zwei Dutzend Elemente, die für das
+Schreiben von Webseiten genutzt werden konnten, vorschlug.
+Die Verwendung von Tags (Wörter umgeben von eckigen Klammern: z.B. <html>) war
+nicht Berners-Lees eigene Errungenschaft. Tags wurden bereits in der SGML
+(Standard Generalized Markup Language) verwendet.
+Anstatt einen komplett neuen Standard zu erfinden, erkannte Berners-Lee die
+Vorteile, bereits existierende Standards weiterzuentwickeln - ein Trend der auch
+in der Entwicklung der neuen HTML5 Spezifikation erkennbar ist.
+
+\subsection{Von der IETF zur W3C: Der Weg zu HTML4}
+Die erste offizielle Spezifikation war HTML 2.0, veröffentlicht durch die IETF,
+die ``Internet Engineering Task Force''. Viele der neuen Features dieser
+Spezifikation basierten dabei auf bereits veröffentlichte Implementierungen. So
+bot der im Jahr 1994 marktführende Web Browser Mosaic Autoren von Webseiten
+bereits die Möglichkeit Bilder in Dokumente mittels eines <img>-Tags
+einzubinden. Das <img>-Tag wurde in die HTML 2.0 Spezifikation inkludiert.
+Die IETF wurde allmählich durch die W3C, dem World Wide Web Consortium, ersetzt.
+Folgende Aktualisierungen des HTML Standards wurden auf \url{http://www.w3.org}
+veröffentlicht. In der zweiten Hälfte der Neunziger wurde der Standard mehrmals
+überarbeitet bis 1999 HTML 4.01 veröffentlicht wurde.
+
+\subsection{XHTML 1: Die Vermischung von HTML und XML}
+Das nächste Update von HTML 4.01 trug den Namen XHTML 1.0. Das X steht dabei für
+``eXtensible''. Die Spezifikation von XHTML 1.0 war ident zu der von HTML 4.01,
+somit wurden keine neuen Elemente und Attribute eingeführt. Die Spezifikationen
+unterschieden sich nur durch die zu verwendende Syntax zum Schreiben von
+Dokumenten. Während Autoren von HTML Dokumenten kaum Einschränkungen im
+Schreibstil von Elementen und Attributen hatten, setzte XHTML es voraus, dass
+die Regeln von XML, einer strikteren Auszeichnungssprache auf der viele
+Technologien des W3C basierten, eingehalten werden.
+Aufgrund der strikteren Regeln einigten sich Autoren auf einen gängigen
+Schreibstil, der auch unter dem HTML 4.01 Standard Verwendung fand. Während Tags
+früher in Kleinbuchstaben, Großbuchstaben oder einer Mischung aus beidem
+geschrieben werden konnten, verlangte ein valides XHTML Dokument, dass alle
+Elemente und Attribute klein geschrieben werden.
+Während XHTML 1.0 noch auf HTML basierte und lediglich die strikteren Regeln von
+XML verwendete, war die XHTML 1.1 Spezifikation reines XML. Dieser Umstand
+führte zu schwerwiegenden Problemen. XHTML 1.1 Dokumente konnten nicht mehr
+unter dem Mime-Type \textit{text/html} definiert werden. Der bis dato
+bekannteste Webbrowser Internet Explorer konnte jedoch Dokumente die mit einem
+XML Mime-Type publiziert wurden, nicht darstellen.
+
+\subsection{XHTML 2}
+Das W3C war mit der vierten Version von HTML der Meinung, dass der HTML basierte
+Ansatz seinen Zenith erreicht hat und setzten für die zukünftigen Version
+vollständig auf XML. Trotz der fast identen Namen von XHTML 1 und XHTML 2,
+konnten die Unterschiede zwischen den beiden Spezifikationen nicht größer sein.
+Anders als XHTML 1, war XHTML 2 nicht abwärtskompatibel mit bereits
+existierenden Webinhalten oder vorangegangenen HTML Versionen. Es sollte ein
+vollkommen neuer Standard werden und es zeigte sich, dass dieser Weg nicht mit
+Erfolg gekrönt sein würde.
+
+\subsection{Die Spaltung: WHATWG}
+Innerhalb des W3C bildete sich eine Gruppierung die gegen die Ansätze
+rebellierten. Namenhafte Vertreter von Opera, Apple und Mozilla waren mit der
+eingeschlagenen Entwicklungrichtung des W3Cs nicht zufrieden. Ihnen war es
+wichtiger mehr Aufmerksamkeit auf Formate zur Entwicklung von Webapplikationen
+zu richten.
+Bei einem Workshop in 2004 schlug Ian Hickson, der zu der Zeit bei Opera
+arbeitete, eine Weiterentwicklung von HTML vor, mit der es möglich sein soll
+Anwendungen zu entwickeln. Der Vorschlag wurde durch die W3C abgelehnt.
+Unzufrieden mit der Entscheidung bildeten die Rebellen eine eigene Gruppe: Die
+Web Hypertext Application Technology Working Group, oder kurz WHATWG.
+
+\subsection{Der Weg von Web Apps 1.0 zu HTML5}
+Von Beginn an operierte die WHATWG anders als das W3C. Während das W3C einen
+kosensorientierten Ansatz anwendet, Themen werden vorgetragen, es wird
+diskutiert und abgestimmt, wird auch bei der WHATWG diskutiert und abgestimmt,
+allerdings liegt die finale Entscheidung, was in die Spezifikation komm und was
+nicht, beim Editor. Der Editor ist Ian Hickson.
+Der W3C Ansatz klingt demokratisch und fair, allerdings führt dieser auch dazu,
+dass der Prozess stark verlangsamt wird. Bei der WHATWG hat jeder die
+Möglichkeit mitzuwirken, da die letzte Entscheidung aber beim Editor liegt,
+entwickelt sich alles schneller.
+Schon zu Beginn der Gründung von WHATWG wurden die Projekte in zwei große
+Spezifikationen aufgeteilt: Web Forms 2.0 und Web Apps 1.0. Beide
+Spezifikationen sollen die bisherige HTML Spezifikation erweitern. Mit
+fortschreitender Entwicklung wurden alle Spezifikationen in eine einzige
+implementiert und in HTML5 umbenannt.
+
+\subsection{Die Wiedervereinigung}
+Während HTML5 von der WHATWG weiter entwickelt wurde, setzte das W3C die
+Entwicklung der XHTML 2 Spezifikation fort. Erst im Oktober 2006, schrieb Sir
+Tim Berners-Lee einen Blog-Post in dem er zugab, dass der Versuch, das Internet
+von HTML auf XML zu übertragen, nicht funktionieren wird.
+Nur wenige Monate später entschied sich die W3C eine neue HTML Working Group zu
+bilden. Anstatt komplett von Anfang an zu beginnen, nutzen sie glücklicherweise
+die bisherige Arbeit der WHATWG als Basis für zukünftige HTML Spezifikationen.
+Dieses hin- und her führte zu einer schwer überschaubaren Situation. Das W3C
+arbeitete parallel an den beiden unterschiedlichen, nicht kompatiblen
+Spezifikationen: XHTML 2 und HTML 5 (mit Leerzeichen). Währenddessen arbeitete
+die WHATWG, an der Spezifikation für HTML5 (ohne Leerzeichen) auf der die Arbeit
+der W3C aufbaut.
+
+\subsection{HTML5: 2012 und 2022}
+Heute ist der aktuelle Stand der HTML5 Spezifikation nicht mehr so
+undurchsichtig wie er früher war, allerdings gibt es noch immer offene Fragen.
+
+Es gibt noch immer zwei Gruppen die an HTML5 arbeiten.
+Die wohl wichtigste Frage für Webentwickler ist "`Wann können wir es nutzen?"'.
+In einem Interview gab Ian Hickson an, dass HTML5 frühestens 2022 den ``proposed
+recommendation'' Status erreichen wird. Klingt nach einer langen Wartezeit,
+allerdings bedeutet ``proposed recommendation'', dass die HTML5 Spezifikation
+zwei mal komplett implementiert werden muss. Als Vergleich: HTML 4 existiert nun
+seit über einem Jahrzehnt und hat noch nicht die gesetzten Features erreicht.
+Wenn man den Umfang der Spezifikation betrachtet, klingt dieses Datum hoch
+gesteckt. Browserhersteller sind nach wie vor nicht dafür bekannt, dass
+existierende Standards so schnell wie möglich implementiert werden. Der Internet
+Explorer benötigte mehr als ein Jahrzehnt um das \textit{abbr}-Element richtig
+darstellen zu können.
+
+Für Webentwickler war das Jahr 2012 wesentlich wichtiger. 2012 erreichte die
+HTML5 Spezifikation den ``candidate recommendation'' Status, der gleichbedeutend
+ist mit "`fertig und abgeschlossen"'.
+Allerdings reicht das alleine leider auch nicht aus. Wirklich entscheident ist
+es wann Webbrowser den neuen Standard unterstützen. Schon die Veröffentlichung
+des CSS 2.1 Standards zeigte, dass man nicht auf die Fertigstellung der
+Spezifikationen warten sollte, sondern, wenn möglich, die Features nutzen sollte
+sobald es möglich ist. Das selbe gilt auch für HTML5. Sobald Webbrowser
+bestimmte Features der Spezifikation unterstützen können diese auch jederzeit
+verwendet werden.
+Man darf nicht vergessen, dass HTML5 keine komplett neu entwickelte Sprache ist.
+Im Sinne der HTML Spezifikation ist es eher eine Evolution als eine Revolution.
+Da HTML5 auf den früheren Versionen aufsetzt und irgendeine Version des HTML
+Standards zur Erstellung von Webseiten genutzt wird, wird bereits HTML5 genutzt.
+
+
+% \section{Geschichte}
+% \subsection{Der Begründer des World Wide Web}
+% Die Geschichte des Internets geht zurück bis in die frühen neuziger als Tim
+%Berners-Lee das World Wide Web entwickelte mit der Hyper Text Markup Language
+%(HTML) als Auszeichnungssprache. Während die Elemente (auch Tags genannt) zur
+%Auszeichnung von Inhalten in strukturierte Teile (Paragraphen, Überschriften,
+%Listen, etc.) dabei auf der Standard Generalized Markup Language (SGML), eine
+%international anerkannte Methode um Texte zu strukturieren, basierte, war die
+%Idee des Hypertext Links von Tim Berners-Lee.
+%Ein Jahr später veröffentlichte Berners-Lee die erste Version seines Browsers.
+%Während dieser Zeit waren die Möglichkeiten von HTML stark eingeschränkt und
+%Entwickler konnten lediglich einfache Textinhalte im Web veröffentlichen. Mit
+%dem Erscheinen von HTML+, welche von Dave Ragget von Hewlett-Packards Labs
+%entwickelt wurde, gab es die Möglichkeit mittels IMG Element auch Bilder in
+%Webseiten zu inkludieren
+
+%Versuche um weitere Verbesserungen zur HTML Spezifikation hinzuzufügen, führte
+%zur Veröffentlichung einer neuen Version, HTML 2.0. Sie basierte vollständig auf
+%der alten Version wurde jedoch mit weiteren Funktionen und der Document Type
+%Definition (DTD) erweitert. Die Funktionen von HTML 2.0 wurden zum Standard für
+%alle Webbrowser. Der Wunsch nach Personalisierung, gestalterischer Freiheit und
+%einem zeitgemäßen Look and Feel führte zu HTML 3.0 und der Einführung der
+%Cascading Style Sheets.
+%
+%Probleme entstanden erst als Netscape sich entschied eigene Tags und Attribute
+%in ihre Browser zu implementieren. Entwickler mussten Tags speziell für Netscape
+%anpassen. Netscape sah jedoch ein, dass ihr Versuch nicht zielführend ist und
+%gab ihe Erweiterungen auf. Mit dem steigenden Interesse am Internet
+%veröffentlichte Microsoft die erste Version des Internet Explorers.
+%
+%Mit dem schnellen Fortschreiten der Entwicklung des HTML Standards wurde HTML
+%4.0 veröffentlicht. Diese Version enthielt weitere Verbesserungen und
+%Möglichkeiten in der Entwicklung von Webseiten. Es gab mehr Möglichkeiten um
+%Multimedia in Webseiten einzusetzen, nutzen von Skiptsprachen, verbesserte
+%Druckeigenschaften, Style Sheets und Optimierungen für Menschen mit
+%Behinderungen.
+
+%IMAGE Timeline of Web Technologies
+% http://www.instantshift.com/2012/07/20/the-evolution-of-html5-infographic/
+% publishing multimedia on the web.pdf
+
+\section{Rich Media}
+\subsection{Audio}
+MP3 stellt das allgegenwärtige Format zur Kodierung von Audio-Dateien dar. Um sich diese
+Audio-Dateien auch anhören zu können waren propritäre Technologien notwendig. Damit
+wurde der Flash Player allgegenwärtig.
+\newline\newline
+Mit HTML5 bietet sich eine neue Technologie an die versucht den Platzhirschen Flash zu
+verdrängen.
+Das Einbinden einer Audio-Datei in ein HTML5-Dokument ist äußerst simpel:
+\begin{verbatim}
+<audio src="sample.mp3">
+</audio>
+\end{verbatim}
+Das Audio Element bietet mehrer Attribute zum Steuern der Audioausgabe an.
+Das Attribut ``autoplay'' sorgt dafür, dass die Audio-Datei nach vollständigem Laden
+sofort gestartet wird. ``loop'' hingegen, kümmert sich darum, dass das die Audio-Datei
+in einer Endlosschleife abgespielt wird.
+\begin{verbatim}
+<audio src="sample.mp3" autoplay loop>
+</audio>
+\end{verbatim}
+Eine Besonderheit dieser Attribute ist, dass sie im Gegensatz zu den herkömmlichen HTML-Attributen,
+keinen Wert zugewiesen bekommen. Das liegt daran, dass es sich bei diesen Attributen bereits um
+``Boolean''-Attribute handelt. Das zuweisen eines Wertes, z.B. autoplay="no", wird an der Ausführung
+des Attributes nichts ändern - entweder die Attribute werden angegeben und ausgeführt oder
+eben nicht.
+
+\subsubsection{Audio API}
+Das Boolean-Attribut controls sorgt dafür, dass der Browser die nativen Kontrollmöglichkeiten
+anzeigt und den Usern zu Verfügung stellt. Somit ist es sehr schnell möglich die Audiowiedergabe
+zu Starten/Stoppen, die Position und die Lautstärke zu verändern.
+%Image Audioplayer mit Controls
+Über JavaScript ist es möglich die Audio API zuzugreifen und somit Methoden für Play, Pause und
+Eigenschaften wie Lautstärke zu nutzen. Ein einfaches Beispiel mit Button Elementen und
+Inline Event Handler:
+\begin{verbatim}
+<audio id="player" src="sample.mp3">
+</audio>
+<div>
+<button onclick="document.getElementById('player').play()">
+Play
+</button>
+<button onclick="document.getElementById('player').pause()">
+Pause
+</button>
+<button onclick="document.getElementById('player').volume += 0.1">
+Volume Up
+</button>
+<button onclick="document.getElementById('player').volume -= 0.1">
+Volume Down
+</button>
+</div>
+\end{verbatim}
+
+\subsubsection{Audioformate}
+Obwohl das Audio Element einen sehr guten Eindruck macht gibt es einen Wehrmutstropfen,
+und dieser liegt nicht in der Spezifikation des Elements. Das Problem ist die breite Fragmentierung
+von Audiocodecs. Leider gibt es bezüglich der zu verwendeten Codecs unterschiedliche Meinungen
+unter den Browserherstellern. Während heutzutage das MP3 Format allgegenwärtig ist,
+ist es nach wie vor kein offenes Format. Die Folge ist, dass MP3 Dateien von Applikationen nur
+dann dekodiert werden können, wenn für die entsprechenden Patentrechte bezahlt wird.
+Für Giganten wie Apple oder Adobe stellt das kein gröberes Problem dar, allerdings erschwert es die
+Arbeit von kleineren Unternehmen und Open-Source Organisationen. Infolgedessen gibt
+Apples Safari ohne Probleme MP3 Datei wieder während Mozillas Firefox daran scheitert.
+\newline\newline
+Natürlich existieren weitere Audioformate. Der Vobis Codec - auch bekannt unter der Datei-Endung
+.ogg - ist zum Beispiel nicht patentiert. Firefox unterstützt den Codec aber Safari nicht.
+\newline\newline
+Glücklicherweise ist es nicht notwendig eine fixe Entscheidung bei der Auswahl des Codecs zu treffen.
+Anstatt das src Attribut im sich öffnenden <audio> Tag zu nutzen, können mehrere Dateiformate
+über source Elemente festgelegt werden:
+\begin{verbatim}
+<audio controls>
+<source src="sample.ogg">
+<source src="sample.mp3">
+</audio>
+\end{verbatim}
+Ein Browser der Ogg Vorbis Datei wiedergeben kann wird sich für die weiteren source Elemente
+nicht mehr interessieren. Ein Browser der MP3 wiedergeben kann aber Ogg Vorbis nicht wird
+einfach das erste Source Element überspringen und die Datei im zweiten wiedergeben.
+Zusätzliche Hilfe bei der Entscheidung bietet die Deklarierung des entsprechenden
+Mime Types der Audio Datei:
+\begin{verbatim}
+<audio controls>
+<source src="sample.ogg" type="audio/ogg">
+<source src="sample.mp3" type="audio/mpeg">
+</audio>
+\end{verbatim}
+Um die Möglichkeiten vom Audio Element vollständig ausnutzen zu können wird angeraten
+MP3 und Ogg Vorbis als Codecs zu verwenden.
+
+\subsubsection{Fallback Lösungen}
+Auch wenn das festlegen von mehreren source Elementen sehr nützlich ist, muss
+bedacht werden, dass Browser existieren die das Audio Element nicht unterstützen.
+Internet Explorer und Konsorten müssen auf die altmodische Art auf ein Flashumsetzung
+zurückgreifen. Glücklicherweise unterstützt das Audie Element die Nutzung von Flash.
+Alles was zwischen den sich öffnenden und schließenden <audio> Tags befindet und
+kein source Element ist wird nur dem Browser, der das audio Element nicht unterstützt,
+angezeigt:
+\begin{verbatim}
+<audio controls>
+<source src="sample.ogg" type="audio/ogg">
+<source src="sample.mp3" type="audio/mpeg">
+<object type="application/x-shockwave-flash"
+<param name="movie" value="player.swf?soundFile=sample.mp3">
+</object>
+</audio>
+\end{verbatim}
+Das object Element bietet zusätzlich eine Möglichkeit an um Fallback Inhalte anzubieten.
+So kann zum Beispiel im schlimmsten Fall ein gewöhnlicher Downloadlink angezeigt werden.
+\begin{verbatim}
+<audio controls>
+<source src="sample.ogg" type="audio/ogg">
+<source src="sample.mp3" type="audio/mpeg">
+<object type="application/x-shockwave-flash"
+<param name="movie" value="player.swf?soundFile=sample.mp3">
+<a href="sample.mp3">Audio Datei herunterladen</a>
+</object>
+</audio>
+\end{verbatim}
+Mit diesem Code werden bereits vier Fallback Ebenen angeboten:
+\begin{itemize}
+\item{Der Browser unterstützt das Audio Element und den Ogg Vorbis Codec.}
+\item{Der Browser unterstützt das Audio Element und den MP3 Codec.}
+\item{Der Browser unterstützt das Audio Element nicht, hat aber das Flash Plug-in installiert.}
+\item{Der Browser unterstützt das Audio Element nicht und hat kein Flash Plug-in installiert.}
+\end{itemize}
+
+\subsection{Video}
+Mit dem anstieg der verfügbaren Bandbreite stieg auch das Interesse an Video Inhalten an.
+Das Flash-Plugin ist derzeit noch die erste Wahl wenn Videos im Web angeboten werden sollen.
+Mit HTML5 könnte sich das ändern.
+\newline\newline
+Das Video-Element funktioniert genauso wie das Audio-Element. Es unterstützt die
+selben optionalen ``autoplay'', ``loop'' und ``preload'' Attribute. Der Speicherort des Videos
+kann entweder mittels ``src'' Attribut im Video-Element oder mittels ``source'' Elementen, die
+sich verschachtelt zwischen den sich öffnenden und schließenden <video> Tags befinden,
+festgelegt werden. Zur Darstellung eines geeigneten User Interfaces kann entweder mittels
+``controls'' Attribut dem der Browser die Darstellung übernehmen lassen oder es wird mit
+entsprechenden HTML-Elementen, CSS Befehlen und JavaScript ein benutzerdefiniertes erstellt.
+\newline\newline
+Einer der wesentlichen Unterschiede zwischen dem Audio und Video Element ist, dass Videos
+natürlicherweise einen fixen Bereich der Webseite einnehmen werden. Um diesen
+Bereich festzulegen müssen im Video Element die entsprechenden Dimensionen definiert werden:
+\begin{verbatim}
+<video src="sample.mp4" controls width="360" height="240">
+</video
+\end{verbatim}
+Um beim Laden des Videos kann mittels ``poster'' Attribute dem Browser mitgeteilt werden,
+währenddessen ein representatives Bild anzuzeigen:
+\begin{verbatim}
+<video src="sample.mp4" controls width="360" height="240"
+poster="sampleimage.jpg">
+</video
+\end{verbatim}
+% Image Placeholder and Dimensions
+Der Kampf der rivalisierenden Videoformate stellt sich noch extremer als bei den Audio Formaten dar.
+Die am stärksten vertretensten Formate sind das patentierte MP4 und das freie Theora Video. Wie beim
+Audio Element muss das Video in mehreren Kodierungen verfügbar und Notfalls eine Fallback Lösung
+vorhanden sein.
+\begin{verbatim}
+<video controls width="360" height="240"
+poster="sampleimage.jpg">
+<source src="sample.ogv" type="video/ogg">
+<source src="sample.mp4" type="video/mp4">
+<object type="application/x-shockwave-flash" width="360" height="240"
+data="player.swf?file=movie.mp4">
+<a href="movie.mp4">Video herunterladen</a>
+</object>
+</video
+\end{verbatim}
+Die Autoren der HTML5 Spezifikation hofften auf eine Standardisierung des Videoformates. Allerdings
+konnten sich die Browserhersteller, bis heute, nicht auf ein einziges Format einigen.
+
+\subsubsection{Native Unterstützung von Videos}
+Die Fähigkeit Videos nativ in Webseiten einzubinden stellt womöglich eine der aufregensten Erweiterung
+von HTML dar, seit der Einführung des ``img'' Elements. Giganten wie Google zögern nicht lange und
+zeigen bereits ihren Enthusiasmus mit einer auf HTML5 basierenden YouTube-Version:
+\url{http://youtube.com/HTML5}
+Eines der Probleme von Plug-ins zur Darstellung von Webinhalten ist, dass der Inhalt des Plug-ins
+von dem restlichen Inhalt der Webseite geschützt ist (``sandboxed''). Nativen Rich Media Elementen
+in HTML haben zur Folge, dass sie ohne Probleme mit den anderen Web-Technologien,
+CSS und JavaScript, zusammen arbeitet.
+\newline\newline
+Das Video Element ist somit nicht nur programmierbar sondern auch stylebar.
+% Image Skin & Style
+Ein Plug-in bietet derartige Möglichkeiten nicht an.
+
+\subsection{Canvas}
+
+Das Canvas Element ist eine Umgebung zur Erstellung von dynamischen Bildern.
+Das Element ist genauso einfach wie das Audio oder Video Element zu verwenden.
+Als Attribute werden lediglich Breiten- und Höhenangaben des Canvas angeboten:
+\begin{verbatim}
+<canvas id="canvas" width="360" height="240">
+</canvas>
+\end{verbatim}
+Alles was sich zwischen den sich öffnenden und schließenden <canvas> Tags
+befindet, wird nur Browsern angezeigt, die das canvas Element nicht
+unterstützen.
+\begin{lstlisting}[language=html]
+<canvas id="canvas" width="360" height="240">
+<p>Canvas Element wird von ihrem Browser nicht unterstuetzt.</p>
+</canvas>
+\end{lstlisting}
+
+JavaScript wird verwendet um das Canvas produktiv nutzen zu können.
+Um mit dem Canvas arbeite zu können muss immer das entsprechende
+Element über ihre ID ausgewählt und der Kontext festgelegt werden.
+Kontext bedeutet in diesem Fall welche API genutzt werden soll:
+\begin{verbatim}
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+\end{verbatim}
+Aktuell stehen nur der 2D und WebGL Kontexts zur Verfügung.
+Mit der Auswahl des Kontextes ist das Canvas Element bereit
+um für das Zeichnen von Bildern genutzt zu werden.
+Die 2D API verfügt über so ziemlich alle Tools die man auch bei einem
+Grafik Programm wie Illustrator erwartet: Es können Linien, Konturen, gefüllte
+Flächen, Verläufe, Schatten, Formen und Bézier Kurven gezeichnet werden.
+Der wesentliche Unterschied besteht allerdings darin, dass kein
+grafischen User Interface genutzt wird, sondern alles mit JavaScript
+definiert werden muss.
+
+\subsubsection{Mit Code zeichnen}
+Um die Farbe einer Kontur bzw. einer Linie zu definieren ist folgender
+Code notwendig:
+\begin{verbatim}
+context.strokeStyle = "\#990000";
+\end{verbatim}
+Alles was nun auf dem Canvas gezeichnet wird, hat eine rote Kontur.
+
+Die Syntax für die strokeRect Methode sieht dabei folgendermaßen aus:
+\begin{verbatim}
+strokeRect(left, top, width, height);
+\end{verbatim}
+Um nun ein rotes Rechteck zeichnen, das 20 Pixel vom linken Rand und
+30 Pixel vom oberen Rand des Canvas entfernt ist und 100 Pixel breit und
+50 Pixel hoch ist, ist folgender Code notwendig:
+\begin{lstlisting}
+context.strokeRect(20, 30, 100, 50);
+\end{lstlisting}
+% Image Rectangle Canvas
+Dabei handelt es sich noch um ein sehr einfaches Beispiel. Die 2D API
+bietet eine sehr umfangreiche Auswahl an Methoden wie
+fillStyle, fillRect, lineWidth, shadowColor und viele mehr.
+\newline\newline
+
+
+\section{Verfügbarkeit}
+Seit der offiziellen Präsentation der ersten Entwürfe der erneuerten
+Webtechnologie, ist die Begeisterung in der IT Branche groß. Diese Begeisterung
+ist besonders an dem Enthusiasmus der Web-Giganten Apple, Google und Mozilla und
+der stetigen Implementierung von HTML5 und CSS3 in ihre Browser erkennbar.
+
+\subsection{HTML5, CSS3 und JavaScript: Das Web von morgen}
+Graph
+
+\subsection{Verfügbarkeit auf Computer}
+Ob und wie weit die Implementierung der neuen Webfeatures in Browsern
+fortgeschritten ist, hängt vollständig von den jeweiligen Browserherstellern ab.
+Um die Verfügbarkeit auf Computern festzustellen, muss der Marktanteil der
+unterschiedlichen Browser mit einbezogen werden.
+
+IMAGE Browser Jahr
+
+Es ist notwendig die kommenden Trends zu bedenken, da die weitere
+Implementierung von HTML5 stark von der Popularität des jeweiligen Web-Browsers
+abhängt. Unbekanntere Browserhersteßller werden naturgemäß mehr Zeit für die zur
+Verfügungstellung von HTML5-Features benötigen als bekannte und beliebte Größen
+wie Google oder Mozilla.
+
+IMAGE Browser Statistik Monat zu Monat
+
+Die angeführten Statistiken zeigen auf, dass nicht nur der gegenwärtige
+Prozentsatz an Nutzern sondern auch der Trendverlauf darauf schließen lässt,
+dass der Internet Explorer tatsächlich nicht mehr zu den marktführenden Browsern
+zählt, wodurch auch dessen Bedeutung in der Web-Entwicklung schwindet.
+Aufgrund der sich reduzierenden Nutzeranzahl und dem Umstand, dass der Internet
+Explorer der Browser mit der am geringsten fortgeschrittensten Implementierung
+des HTML5 Spezifikation am Markt ist, ermöglicht vielen Web-Entwicklern, schon
+vor der Fertigstellung der Spezifikation, die Nutzung einiger neuen Features.
+
+Microsofts Marktstrategie ihr eigenes Betriebssystem (Windows) ausschließlich
+mit dem eigenen Browser auszuliefern ändert kaum etwas an der Statistik. Viele
+Benutzer installieren daher zum Beispiel Mozilla Firefox oder Google Chrome
+selbstständig.
+
+\subsection{Verfügbarkeit auf mobilen Geräten}
+
+\section{Möglichkeiten}
+
+Folglich werden einige neue Elemente der HTML5 Spezifikation genauer
+vorgestellt. Diese wurden auch in der Umsetzung der praktischen Ausarbeitungen
+verwendet.
+
+
+\subsection{Spiele}
+\subsection{Animationen}
+Mit HTML5 Canvas und den CSS3 Neuerungen gibt es für Entwickler neue APIs um
+Grafiken im Web zu zeichnen und diese auch zu animieren. Die APIs bieten
+einfache anzuwendente Funktionen an um vordefinierte Formen zu zeichnen, Bilder
+zu importieren, die Darstellung von bereits gezeichneten Bildern zu verändern
+oder diese auch zu animieren. Im Gegensatz dazu bietet Flash eine komplette IDE
+um schnell komplexe Formen zu erstellen, diese anzuzeigen, deren Verhalten zu
+steuern und zu animieren.
+
+Ein Charakter lässt sich mit einer Zeichenapplikation um ein vielfaches
+einfacher gestalten als mit mehreren Zeilen Code. Flash bietet eine
+vollständiges Tool zur Erstellung und Animierung komplexer Grafiken und ist
+damit wesentlich effizienter zu nutzen, solange es kein equivalentes Tool für
+HTML5 und CSS3 gibt.
+
+Dieses Kapitel soll aufzeigen, ob HTML5 und CSS3 effizient für die Erstellung
+von Animationen verwendet werden kann. Anhand bestehender Animationen ...
+Anschließend werden die Fragen behandelt wie eine Animation mittels Code
+erstellt wird und ob sich der Zeitaufwand für Entwickler auszahlt. Abschließend
+wird analysiert ob Webbrowser die Animationen flüssig wiedergeben können.
+
+\subsubsection{CSS3 Spiderman}
+Ein kurzer Animationsfilm der mittels HTML5, CSS3 und jQuery erstellt wurde. Die
+Animationen sind komplex. So bewegt sich der Hintergrund, es gibt mehrere
+Szenen, unterschiedliche Betrachtungswinkel, Bewegungen und Gesichtsausdrücke.
+Der Film beinhaltet auch Musik mittels dem HTML5 Audio Element.
+
+Bisher gibt es viele Experimente die mittels CSS3 umgesetzt wurden. Im Vergleich
+gibt es nur wenige die auf das Canvas Element und JavaScript setzen.
+
+CSS3 bietet einfache Transformationen (Rotation, Translation, Skalierung) und
+reichen für simple Animationen. Flash bietet zusätzlich Formtransformationen,
+als Beispiel die allmähliche Veränderung eines Kreises in ein Quadrat. Bisher
+ist das mit CSS3 nicht möglich.
+
+CSS3 zeigt im Vergleich zu HTML5 ein größeres Potential um Animationen zu
+erstellen. Allerdings ist es schwierig mittels Code komplexere Animationen zu
+erstellen. Solange es kein Tool für HTML5 und CSS3 Animationen existiert wird
+Flash weiterhin die führende Software in diesem Bereich bleiben.
+
+Performancetechnisch wurde diese Animation ohne jegliche Probleme flüssig in
+jedem modernen Browser angezeigt.
+
+\subsection{Entertainment}
+
+\subsubsection{Audio \& Video}
+Flash ist bis heut noch das bekannteste propritäte Plugin um Audio- und
+Videoinhalte im Internet zur Verfügung zu stellen. Jedoch bietet nun HTML5
+eigene Features die diesem Bereich gewidmet und sind ernst zu nehmende
+Alternativen zu Flash. Es werden die Audio und Video Spezifikation von HTML5
+genauer betrachtet.
+
+\subsubsection{Audio}
+Das Audio Element steht bisher in allen aktuellen Webbrowsern zur Verfügung und
+ist ähnlich einfach zu nutzen wie das Image Element. Folgender Code zeigt wie
+ein Audiofile in eine Webseite eingebunden werden kann:
+\begin{verbatim}
+<audio src="audio.ogg" controls>
+<p>Your browser does not support the audio element.</p>
+</audio>
+\end{verbatim}
+Leider gibt es bezüglich der zu verwendeten Codecs unterschiedliche Meinungen
+unter den Browserherstellern. Um die Möglichkeiten vom Audio Element vollständig
+ausnutzen zu können wird angeraten MP3 und Ogg Vorbis als Codecs zu verwenden.
+
+\subsubsection{Video}
+Ein Video kann mittels folgendem Code auf einer Webseite angezeigt werden:
+\begin{verbatim}
+<video src="movie.ogg" width="640" height="360" controls>
+<p>Your browser does not support the video element.</p>
+</video>
+\end{verbatim}
+Auch beim Video Element ist die Frage nach dem Codec nicht einfach zu
+beantworten. Das Video Element kann mit allen modernen Webbrowsern genutzt
+werden, allerdings gibt es andere Probleme
+
+\begin{itemize}
+\item Apple Geräte können den Ogg Theora Codec aufgrund von Hardware Problemen
+nicht wiedergeben
+\item Opera und Firefox unterstützen den H.264 Codec aufgrund von Lizenz
+Problemen nicht.
+\end{itemize}
+
+Erst vor kurzem brachte Google eine mögliche Lösung ist Spiel: Die Nutzung von
+WebM. Dabei handelt es sich um einen lizenzfreie Videocodec. Firefox, Opera,
+Chrome und auch IE haben bereits bestätigt, dass dieser Codec in Zukunft
+unterstützt wird.
+Einige der bekanntesten Video Streaming Anbieter sind bereits dabei HTML5 für
+Videoinhalte zu nutzen, darunter unter anderem YouTube und Vimeo.
+
+In Kombination mit einem Canvas Element können die Inhalte des Video Elements
+auf verschiedenste Art manipuliert werden. Unter anderem könnte das Bild in
+mehere Teile zerschnitten, Explosionen eingefügt und Filter angewendet werden.
+Allerdings, benötigen komplexe Effekte und Manipulationen eine
+Hardwarebeschleunigung. Flash nutzt zur effizienten Darstellung von Animationen
+und Videos die Grafikkarte des Anwenders. Die Möglichkeiten von HTML5 sind noch
+nicht soweit entwickelt und bietet keine native Möglichkeit um die Hardware des
+Anwenders zu nutzen.
+
+Um auch die Video Element effizient nutzen zu können, sollten die Quelldateien
+mit mindestens zwei verschiedene Codecs zur Verfügung gestellt werden.
+
+\section{Vor- und Nachteile}
+Jeffrey Zeldman war schon im Jahr 2010 der Meinung, dass HTML, CSS und
+JavaScript in Zukunft die Entwicklung von Rich Media Applikationen vorantreiben
+wird. Einige der Vorteile werden hier aufgezählt.
+
+\subsection{Plattformübergreifende Web-Technologien}
+Web-Entwickler mussten vor der Umsetzung einer Webanwendung oder Webseite
+entscheiden für welche Webbrowser entwickelt werden soll. Dieser Umstand
+entstand aufgrund der ungeeigneten Konzeption früherer HTML und CSS Versionen.
+Mit den neuen Webstandards (HTML5, CSS3 und JavaScript) ist es nun möglich
+plattformübergreifende Anwendungen zu erstellen, die nicht nur auf allen
+Desktopbrowsern sonder auch auf mobilen Browsern genutzt werden können.
+
+\subsection{Optimiertes Mobile-Web}
+Bei der Entwicklung von Anwendungen für mobile Geräte spielt die begrenzte
+Bandbreite des Internets eine entscheidente Rolle. Mittels CSS3 können viele
+Bilder durch Gradienten, Schatten und andere Effekte ersetzt werden.
+Überdimensionierte Hintergrund- und Füllbilder werden somit überflüssig und
+führen zu einem geringerem Verbrauch der zur Verfügung stehenden Bandbreite.
+Einige HTML5 Features wie Local oder Session Storage erlauben es Daten
+clientseitig zu speichern und Applikationen auch ohne Internet verfügbar zu
+machen. Zusätzlich müssen Daten die bereits runtergeladen wurden nicht noch
+einmal gealden werden.
+
+\subsection{Rich Media ohne Plugins}
+Die Audio, Video und Canvas APIs von HTML5 erlauben es Rich Media ohne
+Verwendung von Plugins im Internet zu nutzen. Propritäte Technologien die in
+diesem Bereich hauptsächlich verwendet werden haben mit HTML5 einen ernst zu
+nehmenden Konkurrenten bekommen.
+
+\subsection{Rich Media Applikationen}
+Der Großteil der neuen HTML5 Features sind speziell für die Erstellung von Rich
+Media Applikationen vorgesehen.
+
+% =HTML5 Syntax
+\section{Die Syntax von HTML5}
+
+% =HTML5 Rich Media
+\section{Rich Media}
+
+% =HTML5 Web Forms 2.0
+\section{Web Forms 2.0}
+
+% =HTML5 Semantik
+\section{Semantik}
+
+% =HTML5 Schon Heute
+\section{HTML5 schon heute}
