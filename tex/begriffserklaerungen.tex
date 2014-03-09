@@ -1,0 +1,178 @@
+% =Begriffserklaerungen
+\chapter{Begriffserklärungen}
+
+% Marc Frydetzki - Flash und HTML5 im Vergleich
+Bevor in den nächsten Kapitel die zwei Technologien Flash und HTML5
+vorgestellt und im Anschluss anhand einer prototypischen Anwendung
+verglichen werden, wird in diesem Kapitel zunächst die Geschichte des
+Internets vorgestellt. Beide Technologien nehmen einen großen Stellenwert
+in den Diskussionen um dieses Medium ein, wodurch diese Informationen
+grundlegend erforderlich sind. Im Anschluss werden die Arbeitsgruppen die
+sich mit HTML5 beschäftigen und Begriffe der Thematik Web 2.0 erläutert.
+
+\section{Die Geschichte des Internets}
+
+Der Name Internet kommt von dem englischen Begriff ``Interconnected set of
+networks'', was soviel bedeutet wie "`miteinander verbundene Netzwerke"'.
+Das Internet ist heute ein weltumspannendes Netz von vielen einzelnen
+Computernetzwerken.
+Durch die Erfindung des elektrischen Stroms im Jahre 1730 war der
+Grundstein für die elektrische Telegrafie gelegt, welche Samuel Thomas
+von Soemmerring im Jahr 1809 erfand.
+Die Erfindung der elektromagnetischen Induktion im Jahr 1832 durch Michael
+Faradey führte zu den ersten Versuchen mit einem elektromagnetischen
+Telegrafen, wodurch 1833 die erste telegrafische Nachrichtenübertragung
+gelang.
+Ab diesem Zeitpunkt befassten sich mehrere Personen mit der Erforschung und
+Entwischlung von Apparaturen zur Übertragung von akustischen Signalen.
+Schlussendlich war es Alexander Graham Bell - im Jahr 1876 -, der die
+Fertigkeiten zusammen brachte, das Telefon über eine Versuchsapparatur
+hinaus als Gesamtsystem zur Marktreife zu bringen.
+Die Datenübertragung mittels Impulsen, die durch Kabel übertragen werden,
+stellt bis heute das wichtigste Transportmittel von Informationen dar.
+Aufgeschreckt durch \emph{Sputnik}, dem ersten von der UdSSR ins All
+beförderten geostationären Satellit, gründete das Verteidigungsministerium
+der USA die``Advanced Research Projects Agency''. Die ARPA hatte die Aufgabe
+neue Technologien im Bereich der Datenübertragung und Kommunikation zu
+entwickeln.
+Das führte Ende der 1950er Jahre, durch J. C. R. Licklider und seinem
+Forschungsteam, zur Entwicklung des ersten ``Time-Sharing-Systems'' der Welt.
+Dabei war ein Zentralrechner mit sternförmig angeschlossenen Terminals
+verbunden, wodurch mehrere Nutzer gleichzeitig dessen Rechenleistung nutzen
+konnten. Damit wurde es ermöglicht große geografische Distanzen mit Terminals
+eines Herstellers zu überwinden, allerdings war die Anzahl der Anschlüsse
+begrenzt. Für militärische Zwecke eignete sich dieser Netzaufbau jedoch nicht,
+weil eine Störung des Zentralrechner den Ausfall des gesamten Netzes bedeutete.
+Ein weiterführender Ansatz war das dezentrale Netzwerk, mit dem sich Paul
+Baran beschäftigte. Hierbei wurden mehrere Zentralrechner, die jeweils über
+die sternförmig angeschlossenen Terminals verfügten, miteinander verbunden.
+Fiel ein Zentralrechner aus, war das Netzwerk im Ganzen war geschwächt, aber
+immer noch in Teilen nutzbar. Um bei einem Netzwerkschaden so wenige Terminals
+wie möglich zu verlieren, entwickelte Pauk Barann das ``Distributed Network''
+bei dem der Zentralrechner überflüssig wurde. Jedes Terminal, das mit dem
+Netzwerk verbunden war, hat alle Funktionen an Board, die für die
+Kommunikation im Netzwerk notwendig sind und galt somit als Computer. Ein
+weiterer Vorteil mehrerer Verbindungen zu einem möglichen Zielcomputer
+führte zur Entwicklung des ``Packet-Switching'', wobei eine Datei nicht mehr
+als Ganzes übertragen, sondern in viele Datenpakete gleicher Größe zerteilt
+und einzeln transportiert wird. Staus werden somit vermieden, denn pro Paket
+kann die Route neu berechnet werden und muss bei einer fehlerhaften
+Übertragung nicht noch einmal als Ganzes übertragen werden. Diese intelligente
+Übertragung beschleunigte und entlastete das Netzwerk wesentlich. 1965 wurde
+diese Art der Netzkommunikation zum ersten Mal eingesetzt. 1966 begann
+die Planung zur Vernetzung aller über das Land verteilten Computerzentren
+der ARPA nach Paul Barans ``Distributed Network''. Gegen Ende 1969 wurden
+nacheinander die großen Computerzentren verbunden.
+Die angestrebte Unabhängigkeit von Herstellern und Betriebssystem führte zur
+Entwicklung des ``Interface Message Processor'', kurz IMP, durch Wesley Clark.
+Der IMP ist ein Minicomputer mit einem einheitlichen Netzwerkprogramm, der an
+jeden Großrechner angeschlossen wurde unf dür die Datenübermittlung zuständig
+war. Durch diese Verbindung der großen Computerzentren der ARPA enstand das
+ARPANET und zum ersten Mal waren Rechner verschiedenster Art miteinander
+verbunden. Die ersten Anwendungen im ARPANET waren ``Telnet'' und ``FTP''
+bevor Ray Tomlinson 1972 eine Software zum Verschicken und Empfangen
+elektronischer Post veröffentlichte. Der E-Mail-Dienst war geboren und
+führte zu einem sprunghaften Anstieg der Nutzerzahlen. Weitere Verbreitung
+erfuhr das ARPANET durch Vorführung auf der International Conference on
+Computer Communications und Weitergabe des Wissens unter anderem an die NASA,
+die Air Force und Universitäten. Darauf folgte das ALOHANET, das
+Forschungsstationen auf Hawaii vernetzte und sich aufgrund störungsanfälliger
+Telefonleitungen zum PRNET (Packet Radio Network) weiterentwickelte, in dem
+Daten per Radiowellen übertragen wurden. Als weitere Kommunikationsmöglichkeit
+wurde 1973 das SATNET (Datelliten Network) entwickelt. Die Nachteile der
+verschiedenen Datenübertragungsarten führten schließlich 1974 Vinton Cerf und
+Bob Kahn zur Entwicklung eines umfassenden Netzwerkprotokolls, dass sich auf
+ein einheitliches Datenformat und eine einheitliche Verbindungsmethode
+beschränkte, dem Transmission Control Protocol / Internet Protocol, kurz
+TCP/IP. 1983 wurde das TCP/IP zum Standard erklärt und kommt noch heute in der
+Form zum Einsatz. Im selben Jahr entstand das MILNET (Military Network) in
+das der komplette militärische Bereich des ARPANET verlagert wurde. Das
+ARPANET diente ab dem Zeitpunkt nur noch rein zivilen Gruppen. Dieser
+Schritt war notwendig geworden, weil sich immer mehr internationale
+Netzwerke anschlossen und somit die Unabhängigkeit des Militärs in Gefahr
+geriet. Bis 1985 wurden die bestehenden Netzwerke vorrangig von kleineren und
+größeren Nutzergruppen zur Kommunikation und zum Austausch ihrer akademischen
+Forschungsthemen genutzt.
+1985 gab es einen entscheidende Änderung. Die Netzwerkzugänge des 1984
+gegründeten JANET (Joint Academic Network) und des NSFNET (National Science
+Foundation Network) wurden für alle Benutzer -- egal aus welchem
+Forschungsbereich -- geöffnet. Dadurch erlangte das NSFNET immer mehr an
+Beliebtheit und übernahm schließlich 1990 die Funktion des ARPANET. In
+diesem Schritt wurde das ARPANET eingestellt. Im selben Jahr schlossen sich
+die Netzwerke von Canada, Dänemark, Finnland, Frankreich, Island, Norwegen und
+Schweden an das NSFNET an. 1991 folgten dann Deutschland, Japan, Niederlande
+und das Vereinigte Königreich.
+Der Dienst der in der heutigen Zeit von vielen Menschen mit dem Internet
+gleichgesetzt wird ist das World Wide Web. Es ist 1990 aus einer
+Weiterentwicklung eines etwas älteren Projekts von Tim Berners-Lee -- er war
+in den 80er und 90er Jahren Informatiker am Hochenergieforschungszentrum
+CERN -- hervorgegangen und führte zu einer rasant ansteigenden Beliebtheit
+des Internet.
+
+\section{Browser}
+Ein Browser ist ein spezielles Programm, das zur Darstellung von Inhalten aus
+dem Internet (World Wide Web) genutzt werden kann. Er übersetzt die im
+Quellcode verwendeten Befehle in das entsprechende Aussehen. Browser sind
+die Benutzeroberfläche für Webanwendungen, aber auch andere Daten und
+Dokumente können betrachtet werden. Es gibt mehrere Hersteller, die die
+Konventionen des W3C unterschiedlich umsetzen. Diese auseinander gehenden
+Herangehensweisen führen dazu, dass Webseiten in verschiedenen Browsern
+unterschiedlich dargestellt werden. In unterschiedlichen Versionen eines
+Browsers können Konventionen unterschiedlich umgesetzt worden sein, was die
+versionsübergreifende Entwicklung für Programmierer zu einer enormen
+Herausforderung macht. Zu den Merkmalen eines guten Browsers zählen
+Schnelligkeit, Leistungsbedarf auf dem Rechner des Anwenders und die
+Umsetzung der neuesten Innovationen im World Wide Web.
+
+\section{W3C}
+Das W3C ist ein internationales Konsortiom, in dem Mitgliedsorganisationen, ein
+fest angestelltes Team und die Öffentlichkeit gemeinsam daran arbeiten,
+Web-Standards und Richtlinien zu entwickeln -- daher der Name World Wide Web
+Consortium, kurz W3C. Gegründet wurde es am 1. Oktober 1994 von Tim
+Berners-Lee, dem Erfinder des World Wide Web. Die Entstehung des W3C ist eng
+mit der Entstehung des World Wide Web verbunden. Die große Gefahr von
+Inkonsistenten in der Nutzung vorliegender Technologien könnte zu unwirksamen
+Verknüpfungen führen und das galt es möglichst zu verhindern. Die
+Grundherangehensweise an neue Technologien oder Teilaspekte besteht darin, den
+kleinsten gemeinsamen Nenner zu finden und diesen zu einer Spezifikation zu
+verarbeiten, so dass diese von allen Mitgliedsorganisationen unterstützt wird.
+
+\section{WHATWG}
+Die Web Hypertext Application Working Group, kurz WHATWG, ist eine
+Arbeitsgruppe, die von mehreren Unternehmen, darunter unter anderem Mozilla
+Foundation, Opera Software ASA und Apple Inc., betrieben wird und deren Ziel
+die Entwicklung neuer Technologien zur einfacheren Erstellung von
+Internetanwendungen ist. Die WHATWG wurde 2004 gegründet, weil aus Sicht der
+Browser-Hersteller das W3C die Entwicklung von HTML -- zu Gunsten von XHTML
+-- vernachlässigte und auf die Bedürfnisse von Programmierern zu wenig
+einging. Als Unterschied zu den Bestrebungen der W3C muss festgehalten werden,
+dass die WHATWG keinen festen Standard als Zielsetzung verfolgt. Vielmehr soll
+HTML weiterentwickelt werden, ohne aber auf einen definierten Stand hin zu
+arbeiten. Anders das W3C, dessen aktuelle Bestrebungen ganz klar auf HTML5
+ausgelegt sind.
+
+\section{Plattformunabhängigkeit}
+Plattformunabhängigkeit bedeutet bei Software, dass sie ohne extra Aufwand und
+ohne Hilfssoftware auf unterschiedlichen Systemen ausgeführt werden kann.
+Genauer betrachtet ist darunter die Eigenschaft eines Programms zu verstehen,
+auf unterschiedlichen Computersystemen mit Unterschieden in Architektur,
+Prozessor, Compiler, Betriebssystem und weiteren Dienstprogrammen, die zur
+Übersetzung oder Ausführung notwendig sind, lauffähig zu sein.
+
+\section{Rich Internet Application}
+Der Begriff ``Rich Internet Application'' kurz RIA (reichhaltige
+Internetanwendung) wurde von Macromedia im Jahre 2002 erstmalig verwendet.
+Damalige Internetangebote entwickelten sich zunehmend vom reinen statischen
+Wiedergeben von Inhalten zu vom Nutzer manipulierbaren dynamischen Inhalten,
+wodurch der Begriff \emph{Web 2.0} entstand. Der Begriff RIA
+bezeichnet ein Konzept und basiert meist auf mehreren Web-Technologien
+wie zum Beispiel HTML, CSS, JavaScript und AJAX oder Flash und PHP. Um als RIA
+zu gelten, muss eine Anwendung über das Internet verfügbar sein. Allerdings
+muss sie nicht zwangsläufig im Browser ausgeführt werden, sondern kann
+auch als Desktopanwendung zum Einsatz kommen. RIAs im heutigen Sinn bieten dem
+Anwender Möglichkeiten, die früher Desktopanwendungen zur Verfügungen stellten.
+Die Individualisierung und Vereinfachung der Internetnutzung spielt eine
+entscheidende Rolle bei der Entwicklung neuer Anwendungen. Unter Interaktion
+versteht man beispielsweise das Ändern der Gestaltung, das Erzeugen und
+Verwalten von Daten, Drag\&Drop-Funktionalitäten, sowie die Verwendung von
+Tastenkürzeln.

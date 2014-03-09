@@ -1,0 +1,276 @@
+% Marc Frydetzki - Flash und HTML5 im Vergleich
+In diesem Kapitel wird zunächst anhand der Geschichte von Flash die Entstehung
+und Veröffentlichungen bis zum aktuellen Stand beschrieben. Im Anschluss
+wird die Programmiersprache ActionScript, spezifische Dateiformate,
+Einsatzbereiche und häufig verwendete Techniken vorgestellt. Anschließend
+werden Vor- und Nachteile genannt und ein Fazit abgegeben.
+
+\section{Die Geschichte von Flash}
+Als Jonathan Gay und Charlie Jackson -- der Gründer von Silicon Beach
+Software -- 1993 FutureWave Software gründeten, war ihnen sich nicht bewusst,
+mit dieser Firma und dem 1994 erschienenen vektorbasierten Zeichenprogramm
+SmartSketch den Grundstein für das einmal am meisten verbreitete Freeware
+Programm der Welt gelegt zu haben.
+SmartSketch wurde aus der Intention heraus entwickelt, den Arbeitsprozess für
+Gestalter zu vereinfachen, indem die Möglichkeit geschaffen wurde, mittels
+Grafiktablets Zeichnungen -- ähnlich dem Zeichnen auf Papier -- zu erstellen.
+Jonathan Gay wollte eine Software entwickeln, die es dem Anwender erlaubt,
+artgemäß dem Erstellen von Lego-Objekten Schritt für Schritt im
+Gestaltungsprozess Fortschritte zu machen. Dieses Schachtelungsprinzip findet
+sich noch heute in Flash wieder. Im Sommer 1995 erhielt FutureWave
+zunehmend positive Resonanz zu SmartSketch sowie Vorschläge das Grafikprogramm
+zu einem Animationsprogramm weiterzuentwickeln. Zur selben Zeit trat ein neues
+Medium in das Auge der Öffentlichkeit, das Internet. Gay und seine Kollegen
+sahen darin das Potential, dass ein Großteil der zukünftigen Internetnutzer
+reges Interesse daran haben könnte, Grafiken und Animationen anzubieten bzw.
+auszutauschen.
+Daraufhin erweiterte Gay SmartSketch kurzerhand um Animationsmöglichkeiten.
+Mittels Java wurde ein Browserplugin entwickelt, das die erstellten
+Animationen, die im Splash Format (SPL) vorlagen, im Browser abspielen konnte.
+Im Herbst 1995 erschien der Netscape Browser mit dem ``advanced programming
+interface'', welche es erlaubte den Browser zu erweitern. Auf Grund des
+Wiedererkennungswertes wurde SmartSketch erst in CelAnimator und später in
+FutureSplash Animator umbenannt.
+Der größte Erfolg stellte sich im August 1996 ein, als Microsoft für seine
+MSN Web-Version ein fernsehähnliches Erlebnis schuf und das zur Umsetzung
+eingesetzte Programm FutureSplash Animator war. Ein weiter großer Kunde
+war Disney Online, welcher FutureSplash nutzte, um Animationen für den
+Bezahldienst ``Disneys Daily Blast'' zu erstellen. Dadurch, dass Disney zum
+selben Zeitpunkt den Macromedia Shockwave Player nutzte, kam über diesen
+Umweg der Kontakt mit Macromedia zustande. Im Dezember 1996 kaufte Macromedia
+FutureWave und aus FutureSplash Animator wurde Macromedia Flash 1.0. Im
+Zuge der Produktumbenennung wurde aus dem Abspielformat Splash das SWF.
+Seit dem Verkauf an Macromedia erschienen im Jahresrhythmus neue Versionen
+von Flash. Nach und nach stieg der Funktionsumfang und dem Gestalter
+wurden mehr Möglichkeiten zur Auslebung seiner Kreativität gegeben. Im Jahr
+1999 erschien Version 4, die zum ersten Mal die so genannte Programmiersprache
+ActionScript integrierte. Es konnten Variablen, bedingte Anweisungen, sowie
+Schleifen zur Programmsteuerung eingesetzt werden. Dadurch war der Weg
+geebnet für mehr als nur reine Animationsentwicklung. Eingabetextfelder
+ermöglichten es komplexe Formulare zu erstellen und die eingegebenen
+Daten mittels dynamischer Webseiten zu verarbeiten. Im Jahr 2000 erschien
+Version 5 in der ActionScript stark verändert und an den ECMAScript-Standard
+angepasst wurde. JavaScript-Entwicklern sollte dadurch ein schnellerer
+Einstieg in Flash ermöglicht werden, da JavaScript auf diesem Standard
+aufbaute. Eine weitere Neuerung war der Debugger, der den Entwicklungsprozess
+und die damit verbunden häufige Fehlersuche in Flash-Projekten stark
+vereinfachte. 2002 erschien Flash MX (Version 6) mit entscheidenden
+Erweiterungen wie der Zeichnen-API, die es erlaubte dynamische Formen zu
+erstellen. Zusätzlich war ein Videocodec integriert und die Unterstützung für
+Unicode gegeben. Im Oktober 2003 kam Flash MX2004 auf den Markt und damit
+ActionScript 2.0. Im Juni 2004 erscheint die aktualisierte Version Flash
+MX 2004 7.2 in der Stabilitätsprobleme behoben und die Leistung stark
+verbessert wurde. Mitte Juni stellt Macromedia die "`Flash Plattform"' vor,
+die in erster Linie an Unternehmenskunden adressiert war. Am 8. August wurde
+zusammen mit "`Studio 8"' Flash Professional 8 vorgestellt. Flash 8 enthielt
+etliche Neuerungen, unter anderem wurde die Möglichkeit geschaffen
+Rastergrafiken zu erstellen und zu manipulieren. Filter wie zum Beispiel
+Gaußscher Weichzeichner, Schlagschatten oder Verzerrungen, Datei-Upload und
+eine neue Text-Engine namens FlashType, Bitmap-Caching, einstellbares
+Easing, ein neuer Videocodec mit Alphakanal-Unterstützung (Transparenz), ein
+stand-alone Video-Encoder mit Stapelverarbeitung, sowie eine verbesserte
+Programmieroberfläsche sind hier als die bedeutendsten zu nennen. Im selben
+Jahr übernimmt Adobe Macromedia für 3,4 Milliarden US-Dollar. Adobe führt
+die Bezeichnung Macromedia Flash bis zum nächsten Produktzyklus fort,
+danach heißt das Produkt \emph{Adobe Flash}.
+Im Juni 2006 erscheint der Adobe Flash Player 9 für Windows und Mac OS X mit
+speziellen Anpassungen für eine bessere Integration in Adobe Flex 2. Eine
+weitere Innovation stellt die Integration von ActionScript 3.0 dar. Des
+Weiteren ist ein JustInTime-Compiler Bestandteil, welcher mit anderen
+Verbesserungen einen großen Geschwindigkeitsvorteil bei der Scriptausführung
+gegenüber den älteren ActionScript-Versionen mit sich bringt. Seit Mai 2007
+ist Adobe Flash CS3 verfügbar, diese Version ermöglicht direkte Importe aus
+Adobe Photoshop und Illustrator, was zu einer enormen Erleichterung und
+Beschleunigung des Arbeitsprozesses führt. Im Jahr 2008 legt Adobe die
+Spezifikation für Flash offen, was die komplette Indizierung durch
+Suchmaschinen ermöglicht und somit ein großes Manko an SWF-Dateien beheben
+soll. Mitte Oktober erscheint Adobe Flash CS4 und der Adobe Flash Player 10.
+Am 7. Mai 2010 erscheint Adobe Flash CS5, das diverse Neuigkeiten zur
+Prozessoptimierung bietet. Der Flash Builder ist nahtlos integriert und die
+Code Hinweise, die so genannte IntelliSense, wurden stark verbessert. Ein
+weiteres neues Feature sind die Code-Snippets, die häufig verwendete Code-
+Bausteine zur Verfügung stellen. Videos können direkt ub der
+Entwicklungsumgebung abgespielt werden, was der Interaktion mit Videos sehr
+zu Gute kommt. Ein sehr hilfreiches Werkzeug ist die neue Text-Engine. Diese
+erlaubt eine feinere Steuerung von Textelementen. Textfelder können per
+Mausklick in Spalten eingeteilt und so miteinander verknüpft werden, dass
+Text dabei ab einem bestimmten Punkt in ein anderes Textfeld überläuft. Ein
+weiteres neues Feature ist die Unterstützung von XFL-Dateien, diese trennt
+Code, Layout und Assets voneinander. Dadurch wird der Austausch von Daten,
+z.B. Bildern, sehr vereinfacht.
+% Absatz
+Am 10. Juni 2010 erschien der Adobe Flash Player 10.1, der im wesentlichen
+Umfang Stabilität, Performance und Ressourcennutzung optimierte, um somit
+auch auf dem mobilen Endgerätemarkt bestehen zu können. Grundlegende 3D
+Manipulationen und eine 3D-Zeichen API sind integriert worden. Eine große
+Weiterentwicklung stellt das Auslagern von Prozessen auf die Grafikkarte dar.
+Somit wird die CPU entlastet und die Wiedergabe von H.264 Videos (HD)
+beschleunigt. Des Weiteren wurde die Speicherverwaltung überarbeitet und
+Multitouch- sowie Lagesensoren-Unterstützung integriert. Letztere sind
+vorwiegend in Smartphones integriert und ermöglichen neue Möglichkeiten der
+Steuerung und Interaktion.
+% Absatz
+Mit der aktuellsten Flash Player-Version 10.3 stopft Adobe diverse kritische
+Sicherheitslücken, verbessert die Audioqualität und ermöglicht das Löschen
+von ``Local Storage Objects'' über das Browsermenü.
+% sub
+ActionScript
+ActionScript, kurz AS, ist die Programmiersprache für die Adobe Player-
+Laufzeitumgebung. Sie ist eine objekt-und ereignisorientierte
+Programmiersprache, die speziell für die Webseitenanimation entwickelt wurde
+und in direktem Zusammenhang mit der Entstehung von Flash zu nennen ist. Der
+aktuellste Entwicklungsstand ist ActionScript 3.0 und stellt ein vielseitiges
+Werkzeug zur Umsetzung interaktiver und vielseitiger Projekte dar.
+Der ActionScript-Programmcode wird in das sogenannte Bytecode-Format kompiliert
+und anschließend von der ActionScript Virtual Machine, kurz AVM, ausgeführt.
+Ein sogenannter Compiler übernimmt die Umwandlung in Bytecode und bettet
+diesen in eine SWF-Datei ein. Als Erfinder von ActionScript gilt Gary
+Grossman. Er verließ die Firma zeitig um sich anderen Projekten zu widmen.
+%sub
+ActionScript 1.0
+ActionScript wurde erstmals in Flash 4 veröffentlicht und entsprach einer
+Sammlung von Aktionen die mittels "`zusammenklicken"' in einen logischen
+Zusammenhang zu bringen waren. In dieser Version entspricht ActionScript
+einer Mischung aus Perl und JavaScript. Für die Anwendung spezifische Werte
+konnten bereits in Variablen gespeichert und mittels Kontrollstrukturen
+gesteuert werden. In den Vorgängerversionen gab es auch Scripting
+Unterstützung, aber diese basierte auf keinem grundlegenden Standard und
+bezog sich nur auf einfache Zeitleistensteuerung. In der Flash 5 Version
+handelte es sich bei ActionScript erstmals um eine vollwertige
+Programmiersprache. Sie wurde an den ECMAScript 3 Standard angepasst, entsprach
+diesem aber nicht zu 100\%. Zusätzlich wurden Events und Switch-Anweisungen
+eingeführt, wodurch erstmals gezielt auf Nutzeraktionen reagiert werden konnte.
+Eine weitere sehr nützliche Funktionalität waren \emph{Prototypes}, die eine
+Vorstufe zu Klasse darstellen.
+%sub
+ActionScript 2.0
+ActionScript 2.0 erschien im September 2003 zusammen mit dem Flash Player 7
+und wurde mit Flash MX 2004 verfügbar. Die Entwicklergemeinde -- sie war von
+Flash und ActionScript begeistert -- teilte den Flash-Entwicklern Änderungs-
+und Erweiterungsvorschläge mit, wodurch ActionScript 2.0 für größere und
+komplexere Projekte ausgelegt werden konnte. Unter anderem wurde eine
+Laufzeutüberprüfung, klassenbasierte Syntax, die Schlüsselwörter \emph{class}
+und \emph{extends} eingeführt und die Anpassung an den ECMAScript 4 Standard
+vorgenommen. Als besonders gilt, dass ActionScript 2.0 in ActionScript 1.0
+Bytecode abgespeichert wird, damit es auch mit dem Flash Player 6 kompatibel
+ist, da dieser zu dem damaligen Zeitpunkt der am weitesten verbreitete war.
+Die Auslegung auf objektorientierte Programmierung führte dazu, dass AS C++
+und Java immer ähnlicher wurde. Die dadurch stark reduzierte Umstellungs-
+bzw. Einarbeitungszeit machte die Programmiersprache einer größeren
+Entwicklergemeinde zugänglich.
+%sub
+ActionScript 3.0
+ActionScript 3.0 erschien im Juni 2006 zusammen mit dem Flash Player 9 und
+wurde mit Flash 9/CS3 verfügbar. Diese Version basiert auf der ECMAScript 4
+Sprachspezifikation, wurde vollkommen überarbeitet und ist für vollständige
+objektorientierte Programmierung ausgelegt. AS 3.0 unterscheidet sich in
+seiner Architektur und Konzeption weitestgehend von seinen Vorgängern. In
+Folge dessen wurde die AVM neu konzipiert und für AS 3.0 in AVM2 umbenannt.
+Als besondere Neuerung ist das Ereignismodell, das auf der DOM3-
+Ereignisspezifikation basiert, zu beachten. Die verschiedenen visuellen
+Elemente einer AS 3.0 Anwendung sind in der AnzeigeListe -- einer Art
+Baumstruktur -- angeordnet. Jedes Element hat ein Vaterelement und eventuell
+Kinderelemente. Das Ereignismodel spielt in der Nutzung der neuen einheitlichen
+Klassen zum Laden von diversen Daten eine entscheidende Rolle.
+Mit der URLLoader-Klasse lassen sich Text oder Binärdaten, z.B. XML-Dateien
+oder PHP-Skripte, laden. Um Zustandsänderungen des Ladevorgangs abfangen zu
+können, müssen relevante Ereignisse (Events) mit der Funktion
+\emp{haddEventListener()} direkt an das Objekt der URLLoader-Klasse
+"`angehängt"' werden. Während des Download-Vorgangs geben Benachrichtigungen
+(Events) über den Fortschritt Auskunft. Die zwei Eigenschaften
+\emph{bytesLoaded} und \emph{bytesTotal}, die als Eigenschaften des
+\emph{ProgressEvent} abrufbar sind, bieten die Möglichkeit den Ladevorgang
+prozentual darzustellen. Ist der Ladevorgang abgeschlossen, sind die geladenen
+Daten über die Eigenschaft data des Events abrufbar.
+Zum Laden von SWF-Dateien und Grafiken (JPG, PNG, GIF) ist die Loader-Klasse
+vorgesehen, bei der die Event-Listener an die Eigenschaft
+\emph{contentLoaderInfo}, ein Objekt das dem zu ladenden Datenobjekt
+entspricht, angehängt werden.
+%Absatz
+Die neue URLStream-Klasse stellt noch während des Downloadvorgangs Zugriff auf
+die Daten als unformatierte Binärdaten bereit, wodurch z.B. Informationen wie
+der Dateityp und die Auflösung eines Bildes ermittelt werden können.
+AS 3.0 unterstützt Pakete und Namespaces, wodurch besonders die Strukturierung
+von Projekten verbessert und Namenskonflikte vermiedern werden.
+Eine weitere sehr nützliche Neuerung stellt die XML-API dar, die auf der
+E4X-Spezifikation beruht. XML-Daten werden nun als nativer Datentyp behandelt,
+dies führt zu einer enormen Steigerung der Verarbeitungsgeschwindigkeit seitens
+der AVM und zusätzlich zu einer einfacheren Verarbeitung und Nutzung von
+XML-Daten.
+Die Aufnahme der numerischen Grunddatentypen ``int'' als z.B. Schleifenzähler-
+Variable und ``uint'' als z.B. Farbwert stellt im Verhältnis zu AS 2.0 nicht
+nur für Programmierer ein nützliches Mittel dar. Die Vorteile der schnellen
+Ganzzahlenarithmetik der CPU können damit genutzt werden und führen ihrerseits
+zu einer kürzeren Verarbeitungszeit. In AS 3.0 wird ein strikte Typisierung
+vorausgesetzt und die vom Programmierer gesetzten Datentypen bleiben zur
+Laufzeit erhalten. Während des Kompilierens und zur Laufzeit wird eine
+Datentypüberprüfung durchgeführt, wodurch die Datentypsicherheit des Systems
+stark verbessert wird.
+Alle textbezogenen Schnittstellen wurden im \emph{flash.text} Paket
+zusammengefasst. Zusätzlich wurde die TextLineMetrics-Klasse hinzugefügt,
+die sehr nützliche Informationen über eine einzelne Zeile oder ein Zeichen
+liefert. Ab Flash CS5 und somit Flash Player Version 10 wurde die Text-Engine
+durch das neue TLF-Text Format erweitert, wodurch Funktionalitäten geboten
+werden, die Flash-Programmierern enorm viel Arbeit abnehmen. Es lassen sich
+nahezu alle Text-Manipulationen durchführen, die in Layout-Werkzeugen schon
+lange möglich sind. Zum Beispiel sind mehrspaltige Textfelder, Textfluss um
+Objekte und Textfeld-Verknüpfungen, die "`überfließenden"' Text ermöglichen,
+realisierbar. Die neue Sound-API bietet mittels SoundChannel- und SoundMixer-
+Klasse umfangreiche Funktionen. Audio lässt sich nun synthetisieren,
+manipulieren und abspielen. Darüber hinaus ist eine exakte Steuerung einzelner
+und aller in einer Anwendung befindlicher Sounds möglich.
+Im Bereich Video wird ab dem Flash Player 10.1 die Hardware beschleunigte
+Dekodierung von H.264-Videos eingeführt. Erfüllt der Client die notwendigen
+Voraussetzungen, wird die Dekodierung aud die Hardware des Clients
+ausgelagert. Somit wird die CPU weniger beansprucht, was zu einer besseren
+Performance des Flash Players und einer niedrigeren Systemauslastung führt.
+Insbesondere auf mobilen Geräten wird dadurch der Akku geschont.
+
+%sub
+Dateiformate
+%sub
+.fla
+Eine FLA Datei ist eine unkomprimierte Projektdatei und enthält alle
+Ausgangsmaterialien und Animationen. Mit dem ensprechenden Flash
+Autoringwerkzeug kann sie bearbeitet und zu einer kompiliert (veröffentlicht)
+werden.
+%sub
+.swf
+Eine SWF-Datei ist ein komprimiertes Flashprojekt (Bytecode) und kann von
+einem Flash Player abgespielt werden. Bei der Bedeutung, was SWF ausgeschrieben
+heißt, gibt es keine eindeutige Festlegung. Es gibt zwei Varianten, die in etwa
+gleich viel Bedeutung finden. Zum einen \emph{ShockWaveFlash}, sie entspricht
+der Bezeichnung, die Macromedia als 3D-Format der Director-Umgebung
+vermarktet hatte. Die andere Variante ist \emph{SmallWebFormat}, was den
+Eigenschaften des Formates, geringe Dateigröße und enorme Skalierbarkeit ohne
+Qualitätsverlust, am ehesten entspricht. Die geringe Dateigröße und
+Skalierbarkeit resultieren daraus, dass Grafiken, die in Flash erstellt wurden,
+als Vektorgrafik abgespeichert werden.
+%sub
+.as
+Eine ActionScript-Datei enthält ausschließlich ActionScript Anweisungen
+und kann mit jedem Texteditor bearbeitet werden. Zum Beispiel kann jedes
+Objekt in einem Flash-Projekt als Klasse in einer .as-Datei gespeichert werden.
+Dieses Format ermöglicht eine bessere Strukturierung von Projekten, indem
+Design und Quellcode getrennt gespeichert werden.
+%sub
+.mxml
+MXML ist eine auf XML basierende Beschreibungssprache die von Adobe Flex und
+dem Adobe Flash Builder verwendet wird, insbesondere lassen sich mit ihr
+Komponenten beschreiben und mit Funktionalität versehen. Eingeführt wurde
+MXML, um die Entwicklung von RIAs und den Einstieg für Softwareentwickler zu
+vereinfachen.
+%sub
+Weitere Formate
+.swd - Eine vom Flash Debugger erzeugte Datei die Debug-Informationen enthält.
+Sie wird benötigt um Remote Debugging durchzuführen und ermöglicht Einblick
+in die Struktur einer SWF
+.asc - Eine Datei die Server-seitiges ActionScript enthält
+.flv - Flash Video Format, ein Containerformat das ein Flashvideo enthält
+.swc - Eine ZIP-Datei die mit dem Flash-Authoring-Tool erstellt wird und
+Informationen über eine oder mehrere Flash-Komponenten enthält
+.jsfl - Eine Datei die Anweisungen zur Erweiterung des Flash-Authoring-Tools
+enthält
+.flp - Eine XML-Datei die alle Informationen über ein Flashprojekt enthält.
+.aso - Eine Datei die vom Flash Player erzeugt wird, um Local Shared Objects zu
+speichern.

@@ -1,0 +1,128 @@
+%# HTML5 Canvas
+\chapter{HTML5 Canvas}
+
+% Überblick Canvas Element (Was ist es?)
+% Wie funktioniert es (Vergleich Canvas/Flash)
+% Überblick Canvas API (Was kann es?)
+% Beispiele (Wie wird es gemacht?)
+% Wo wird es schon verwendet?
+
+\section{Einleitung}
+Das Canvas Element bildet eines der größten Teile der HTML5 Spezifikation.
+Es bietet eine API für das Zeichnen von 2D Objekten, wie Linien, Füllungen,
+Bilder oder Text. Ein Vergleich mit MS Paint ist sehr gut um sich die
+Möglichkeiten mit dem Canvas Element vorstellen zu können. Tatsächlich
+gibt es bereits mehrere Implementationen, basierend auf dem Canvas Element,
+die Applikationen wie MS Paint vollständig ersetzen können. Es geht bereits so
+weit, dass laufend neue Zeichenapplikationen entstehen, die sich darum
+bemühen, als vollwertige Vektor-Zeichenprogramm, ähnlich wie Adobe
+Illustrator, angesehen zu werden. Das bemerkenswerte daran ist, dass es
+auch einige Anwendungen gibt, die ebenfalls auf mobilen Endgeräten, wie
+iPhones oder Android Smartphones, funktionstüchtig sind.
+
+% Pics, Canvas MS Paint, Sketchpad, Harmony
+
+\section{Geschichte}
+Das Konzept des Canvas Elements wurde durch Apple eingeführt um in Mac OS X
+Webkit Widgets für das Dashboard zu erstellen. Vor der Einführung des Canvas
+Elements konnten Zeichen Schnittstellen im Browser nur dann genutzt werden,
+wenn Plugins wie Flash von Adobe, Scaleable Vector Graphics (SVG), die
+Vector Markup Language (VML), welche nur in Internet Explorer vorhanden war,
+oder diverse JavaScript Bibliotheken eingesetzt wurden. % (Mary Nyamor S.25)
+\newline
+Das Canvas Element ist eine Umgebung für das Erstellen von dynamischen Bildern.
+Das Element selbst ist dabei sehr einfach zu verwenden. Lediglich die
+Dimensionen des Canvas und eine id, über die das Canvas anschließend über
+JavaScript referenziert werden kann, müssen festgelegt werden.
+%
+\lstset{style=HTML5}
+\begin{lstlisting}
+  <canvas id="myCanvas" width="360" height="240">
+  </canvas>
+\end{lstlisting}
+%
+Alles was sich zwischen den sich öffnenden und schließenden <canvas> Tags
+befindet, wird nur Browsern angezeigt, die das Canvas Element nicht
+unterstützen.
+%
+\begin{lstlisting}
+  <canvas id="myCanvas" width="360" height="240">
+    <p>Canvas is not supported by your browser.</p>
+  </canvas>
+\end{lstlisting}
+%
+Um auf dem Canvas zeichnen zu können muss JavaScript verwendet werden. Dabei
+muss zunächst das entsprechende Canvas über seine id ausgewählt und
+anschließend der gewünschte Kontext definiert werden. Die Auswahl des Kontexts
+beeinflusst die Funktionen der genutzen API:
+%
+\lstset{style=JavaScript}
+\begin{lstlisting}
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+\end{lstlisting}
+%
+Beim Verfassen dieser Arbeit standen nur der 2D oder der WebGL (3D) Kontext zur
+Verfügung. Mit der Auswahl des gewünschten Kontexts ist das Canvas Element
+bereit um für das Zeichnen von Bilder genutzt zu werden. Die 2D API verfügt
+über alle Funktionen die bei einem herkömmlichen, teils kostenpflichtigen,
+Grafikprogramm wie zum Beispiel Adobe Illustrator erwartet werden: Es können
+Linien, Konturen, gefüllte Flächen, Verläufe, Schatten, Formen und Bézier
+Kurven gezeichnet werden. Der wesentliche Unterschied zwischen dem Canvas
+Element und einem Grafikprogramm besteht allerdings darin, dass das Canvas
+Element kein grafisches User Interface, zum Erstellen von Bildern, zur
+Verfügung stellt, sondern jeder Pixel per JavaScript programmiert werden muss.
+
+\subsection{Mit Code zeichnen}
+Um die Farbe einer Kontur bzw. einer Linie zu definieren ist folgender Code
+notwendig:
+%
+\begin{lstlisting}
+  context.strokeStyle = "\#990000";
+\end{lstlisting}
+%
+Alles was nun folgend auf dem Canvas gezeichnet wird, hätte eine rote Kontur.
+Um ein Rechteck mit Kontur und ohne Füllung auf das Canvas zu Zeichnen gibt es
+die strokeRect Methode und ist folgendermaßen definiert:
+%
+\begin{lstlisting}
+  strokeRect(left, top, width, height);
+\end{lstlisting}
+%
+Um nun ein rotes Rechteck zeichnen zu können, das 20 Pixel vom linken Rand und
+30 Pixel vom oberen Rand des Canvas entfernt ist, 100 Pixel breit und 50 Pixel
+hoch ist, ist folgender Code notwendig:
+%
+\begin{lstlisting}
+  context.strokeRect(20, 30, 100, 50);
+\end{lstlisting}
+%
+Dabei handelt es sich noch um ein sehr einfaches Beispiel um das Canvas zum
+Zeichnen zu nutzen. Der 2D Kontext bietet eine sehr umfangreiche Auswahl an
+vordefinierten Methoden wie fillStyle, zum Festlegen von Füllungen, fillRect,
+um ein gefülltes Rechteck zu zeichnen, lineWidth, zum Festlegen der
+Linienstärke, shadowColor, zum Festlegen der Schattenfarbe, und viele mehr.
+Theoretisch betrachtet kann jedes Bild das mit einem Programm wie Adobe
+Illustrator erstellt werden kann, ebenfalls mit dem Canvas Element realisiert
+werden. Praktisch sieht das anders aus. Ein Versuch würde sich als
+äußerst arbeitsaufwendig und in einer Unmenge an JavaScript äussern.
+Abgesehen davon, wurde das Canvas Element nicht zur Reproduktion von
+aufwendigen Pixel- oder Vektorgrafiken entwickelt.
+
+\subsection{Canvas: Was bringts?}
+Im vorherigen Abschnitt wurde ein Beispiel, die Reproduktion von Bildern,
+genannt, wofür das Canvas Element nicht verwendet werden sollte. Die wirkliche
+Macht des Canvas Elements liegt in der Möglichkeit, dass dessen Inhalt
+jederzeit, aufgrund von zum Beipiel Nutzereingaben, verändert werden kann.
+Gerade das Reagieren auf Nutzereingaben ermöglicht die Erstellung von
+Anwendungen und Spiele die ursprünglich eine Technologie wie Adobe Flash
+benötigten.
+\newline
+Eines der ersten Vorzeigebeispiele für die Möglichkeiten des Canvas Elements
+wurde von Mozilla Labs entwickelt. Bespin: Ein Code Editor der innerhalb des
+Browserfensters läuft. % (https://bespin.mozilla.com) + bild
+Eine sehr eindrucksvolle und nützliche Applikation, allerdings von vielen
+Entwicklern als perfektes Beispiel betrachtet, wofür das Canvas Element nicht
+genutzt werden sollte.
+
+

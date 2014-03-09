@@ -1,0 +1,452 @@
+%# HTML5
+\chapter{HTML5}
+
+\section{Was ist HTML5?}
+
+%## HTML5 Geschichte
+\section{Die Geschichte von HTML}
+HTML, ``Hypertext Markup Language'', ist die allgegenwärtige
+Auszeichnungssprache des World Wide Webs. Durch den geschickten Einsatz der
+paar Elemente (fortan: Tags, Wörter umgeben von eckigen Klammern z.B. <html>)
+die die Sprache unterstützt, konnten erstaunlich viele unterschiedliche
+Netzwerke von verlinkten Dokumente erstellt werden. Von bekannten Seiten wie
+Amazon, Ebay und Wikipedia bis hin zu personalisierten Blogs oder Webseiten,
+die sich zum Beispiel auf Katzenbilder spezialisiert haben. HTML5 ist die
+aktuellste Version dieser Auszeichnungssprache. Obwohl diese Version die
+bisher umfangreichsten Änderungen mit sich bringt, ist es nicht die erste
+Aktualisierung von HTML.
+\newline\newline
+Sir Tim Berners-Lee zeichnet sich für die Entwicklung von HTML und damit dem
+Beginn des Internets verantwortlich. 1991 veröffentlichte er ein Dokument mit
+dem Titel ``HTML Tags'', in dem er weniger als zwei Dutzend Elemente, die für
+das Schreiben von Webseiten genutzt werden konnten, vorschlug.
+Darunter auch einige Tags, die bis dato verwendet werden, wie zum Beispiel:
+%
+\begin{itemize}
+  \item{Listen (<ul>, <ol>, <li>)}
+  \item{Überschriften (<h1>, <h2>, ...)}
+  \item{Paragraphen (<p>)}
+  \item{Titel (<title>)}
+  \item{Links (<a>)}
+\end{itemize}
+%
+Die Verwendung von Tags war nicht Berners-Lees eigene Errungenschaft. Tags
+wurden bereits in der SGML (Standard Generalized Markup Language) verwendet.
+Anstatt einen komplett neuen Standard zu erfinden, erkannte Berners-Lee die
+Vorteile, bereits existierende Standards weiterzuentwickeln - ein Trend der
+auch in der Entwicklung der neuen HTML5 Spezifikation erkennbar ist.
+
+\subsection{Von der IETF zur W3C: Der Weg zu HTML4}
+Die erste offizielle Spezifikation war HTML 2.0, veröffentlicht durch die IETF,
+die ``Internet Engineering Task Force''. Viele der neuen Features dieser
+Spezifikation basierten dabei auf bereits veröffentlichte Implementierungen.
+So bot der im Jahr 1994 marktführende Web Browser Mosaic Autoren von
+Webseiten bereits die Möglichkeit, Bilder in Dokumente mittels eines <img>-Tags
+einzubinden. Das <img>-Tag wurde in die HTML 2.0 Spezifikation inkludiert.
+Die IETF wurde allmählich durch die W3C, dem ``World Wide Web Consortium'',
+ersetzt. Folgende Aktualisierungen des HTML Standards wurden auf \url{
+http://www.w3.org} veröffentlicht. In der zweiten Hälfte der Neunziger wurde
+der Standard mehrmals überarbeitet bis 1999 HTML 4.01 veröffentlicht wurde.
+
+\subsection{XHTML 1: Die Vermischung von HTML und XML}
+Das nächste Update von HTML 4.01 trug den Namen XHTML 1.0. Das X steht dabei
+für ``eXtensible''. Die Spezifikation von XHTML 1.0 war ident zu der von
+HTML 4.01, somit wurden keine neuen Elemente und Attribute eingeführt. Die
+Spezifikationen unterschieden sich nur durch die zu verwendende Syntax zum
+Schreiben von Dokumenten. Während Autoren von HTML Dokumenten kaum
+Einschränkungen im Schreibstil von Elementen und Attributen hatten, setzte
+XHTML es voraus, dass die Regeln von XML, ``Extensible Markup Language'',
+einer strikteren Auszeichnungssprache auf der viele Technologien des W3C
+basierten, eingehalten werden. Aufgrund der strikteren Regeln einigten sich
+Autoren auf einen gängigen Schreibstil, der auch unter dem HTML 4.01 Standard
+Verwendung fand. Während Tags früher in Kleinbuchstaben, Großbuchstaben oder
+einer Mischung aus beidem geschrieben werden konnten, verlangte ein valides
+XHTML Dokument, dass alle Elemente und Attribute klein geschrieben werden.
+Während XHTML 1.0 noch auf HTML basierte und lediglich die strikteren Regeln
+von XML verwendete, war die XHTML 1.1 Spezifikation reines XML. Dieser Umstand
+führte zu schwerwiegenden Problemen. XHTML 1.1 Dokumente konnten nicht mehr
+unter dem Mime-Type \textit{text/html} definiert werden. Der bis dato
+bekannteste Webbrowser Internet Explorer konnte jedoch Dokumente die mit einem
+XML Mime-Type publiziert wurden, nicht darstellen.
+
+\subsection{XHTML 2}
+Das W3C war mit der vierten Version von HTML der Meinung, dass der HTML
+basierte Ansatz seinen Zenith erreicht hat und setzte für die zukünftige
+Version vollständig auf XML. Trotz der fast identen Namen von XHTML 1 und
+XHTML 2, konnten die Unterschiede zwischen den beiden Spezifikationen nicht
+größer sein. Anders als XHTML 1, war XHTML 2 nicht abwärtskompatibel mit
+bereits existierenden Webinhalten oder vorangegangenen HTML Versionen. Es
+sollte ein vollkommen neuer Standard werden und es zeigte sich, dass dieser
+Weg nicht mit Erfolg gekrönt sein würde.
+
+\subsection{Die Spaltung: WHATWG}
+Innerhalb des W3C bildete sich eine Gruppierung die gegen die Ansätze
+rebellierten. Namenhafte Vertreter von Opera, Apple und Mozilla waren mit der
+eingeschlagenen Entwicklungrichtung des W3Cs nicht zufrieden. Ihnen war es
+wichtiger, mehr Aufmerksamkeit auf Formate zur Entwicklung von Webapplikationen
+zu richten. Bei einem Workshop in 2004 schlug Ian Hickson, der zu der Zeit bei
+Opera arbeitete, eine Weiterentwicklung von HTML vor, mit der es möglich sein
+soll, Anwendungen zu entwickeln. Der Vorschlag wurde durch die W3C abgelehnt.
+Unzufrieden mit der Entscheidung bildeten die Rebellen eine eigene Gruppe:
+Die ``Web Hypertext Application Technology Working Group'', oder kurz WHATWG.
+
+\subsection{Der Weg von Web Apps 1.0 zu HTML5}
+Von Beginn an operierte die WHATWG anders als das W3C. Während das W3C einen
+kosensorientierten Ansatz anwendet, Themen werden vorgetragen, es wird
+diskutiert und abgestimmt, wird auch bei der WHATWG diskutiert und abgestimmt,
+allerdings liegt die finale Entscheidung, was in die Spezifikation komm und
+was nicht, beim Editor. Der Editor ist Ian Hickson. Der W3C Ansatz klingt
+demokratisch und fair, allerdings führt dieser auch dazu, dass der Prozess
+stark verlangsamt wird. Bei der WHATWG hat jeder die Möglichkeit mitzuwirken,
+da die letzte Entscheidung aber beim Editor liegt, entwickelt sich alles
+schneller. Schon zu Beginn der Gründung von WHATWG wurden die Projekte in zwei
+große Spezifikationen aufgeteilt: Web Forms 2.0 und Web Apps 1.0. Beide
+Spezifikationen sollen die bisherige HTML Spezifikation erweitern. Mit
+fortschreitender Entwicklung wurden alle Spezifikationen in eine einzige
+implementiert und in HTML5 umbenannt.
+
+\subsection{Die Wiedervereinigung}
+Während HTML5 von der WHATWG weiter entwickelt wurde, setzte das W3C die
+Entwicklung der XHTML 2 Spezifikation fort. Erst im Oktober 2006, schrieb Sir
+Tim Berners-Lee einen Blog-Post, in dem er zugab, dass der Versuch, das
+Internet von HTML auf XML zu übertragen, nicht funktionieren wird.
+Nur wenige Monate später entschied sich das W3C eine neue HTML Working Group
+zu bilden. Anstatt komplett von Anfang an zu beginnen, nutzen sie
+glücklicherweise die bisherige Arbeit der WHATWG als Basis für zukünftige HTML
+Spezifikationen. Dieser Umstand führte zu einer schwer überschaubaren
+Situation. Das W3C arbeitete parallel an den beiden unterschiedlichen, nicht
+kompatiblen Spezifikationen: XHTML 2 und HTML 5 (mit Leerzeichen).
+Währenddessen arbeitete die WHATWG, an der Spezifikation für HTML5 (ohne
+Leerzeichen) auf der die Arbeit der W3C aufbaut.
+
+\subsection{HTML5: 2012 und 2022}
+Heute ist der aktuelle Stand der HTML5 Spezifikation nicht mehr so
+undurchsichtig wie er früher war, allerdings gibt es noch immer offene Fragen.
+\newline\newline
+Es gibt noch immer zwei Gruppen die an HTML5 arbeiten. Die wohl wichtigste
+Frage für Webentwickler ist: Wann können wir es nutzen? In einem Interview gab
+Ian Hickson an, dass die HTML5 Spezifikation frühestens 2022 den ``proposed
+recommendation'' Status erreichen wird. Klingt nach einer langen Wartezeit,
+allerdings bedeutet ``proposed recommendation'', dass die HTML5 Spezifikation
+zwei mal komplett implementiert werden muss. Als Vergleich: HTML 4 existiert
+nun seit über einem Jahrzehnt und hat noch nicht die gesetzten Features
+erreicht. Wenn man nun den Umfang der Spezifikation betrachtet, klingt dieses
+Datum hoch gesteckt. Browserhersteller sind nach wie vor nicht dafür bekannt,
+dass existierende Standards so schnell wie möglich implementiert werden. Der
+Internet Explorer benötigte mehr als ein Jahrzehnt um das \textit{abbr}-
+Element richtig darstellen zu können.
+\newline\newline
+Für Webentwickler war das Jahr 2012 wesentlich wichtiger. 2012 erreichte die
+HTML5 Spezifikation den ``candidate recommendation'' Status, der
+gleichbedeutend ist mit "`fertig und abgeschlossen"'. Allerdings reicht das
+alleine leider auch nicht aus. Wirklich entscheidend ist die Frage: Ab wann
+unterstützen Webbrowser den neuen Standard? Schon die Veröffentlichung des
+CSS 2.1 Standards zeigte, dass man nicht auf die Fertigstellung der
+Spezifikationen warten sollte, sondern, wenn möglich, die Features nutzen
+sollte sobald es möglich ist. Das selbe gilt auch für HTML5. Sobald Webbrowser
+bestimmte Features der Spezifikation unterstützen, können diese auch jederzeit
+verwendet werden. Man darf nicht vergessen, dass HTML5 keine komplett neu
+entwickelte Sprache ist. Im Sinne der HTML Spezifikation ist es eher eine
+Evolution als eine Revolution. Da HTML5 auf den früheren Versionen aufsetzt
+und immer irgendeine Version des HTML Standards zur Erstellung von Webseiten
+genutzt wird, wird bereits HTML5 genutzt.
+
+\section{Features}
+Mit HTML5 wird Entwicklern eine Fülle an neuen Funktionen und Features
+angeboten. An dieser Stelle soll ein Überblick über die Funktionalitäten
+gegeben werden, die diese Technologie auszeichnet.
+
+\subsection{Grafiken und Animation}
+\begin{itemize}
+  \item{2D Zeichentools}
+  \item{Animationstools}
+  \item{3D Unterstützung}
+  \item{3D Transformationen}
+  \item{SVG (Scaleable Vector Graphics)}
+  \item{Skalierbare Inhalte}
+  \item{Web-Fonts}
+  \item{Filtereffekte (z.B. Weichzeichnen)}
+  \item{Präsentationen}
+\end{itemize}
+Die Spezifikation von HTML5 enthält bereits umfangreiche Ansätze zum Erstellen
+von Grafiken und Animationen. So können mit CSS3 und dem neuen Canvas-Element
+einfache und auch komplexe Grafiken erstellt und, mit dem Einsatz von der von
+dem Canvas-Element zur Verfügung gestellten Schnittstellen, über JavaScript
+animiert werden. Dank CSS3 können auch erstmals ohne Abstriche Schriftarten
+integriert und verwendet werden. Ein Feature das bis zu diesem Zeitpunkt nur
+von Flash angeboten wurde. Mit der Integration des SVG-Formats bietet auch
+HTML5 eine Möglichkeit um skalierbare Inhalte in Webseiten einzubinden.
+Einfache Filtereffekte können nun unkompliziert mit CSS3-Regeln erstellt
+werden. Für komplexe Effekte kann das Canvas-Element in Kombination mit
+JavaScript verwendet werden.
+
+\subsection{Schnittstellen (APIs)}
+\begin{itemize}
+  \item{Zugriff auf das Filesystem}
+  \item{Sockets}
+  \item{Geolocation}
+  \item{Datenaustausch}
+\end{itemize}
+HTML5 bietet wie Adobe Flash eine Vielzahl an Schnittstellen, um mit anderen
+Systemen zu interagieren. Beispielsweise kann auf das Filesystem des
+Computers zugeriffen werden, um Daten zu speichern oder zu laden.
+Mittlerweile gibt es eine Unmenge an JavaScript Frameworks aus denen ein
+Entwickler zur Umsetzung von Projekten zurückgreifen kann. Das wohl
+bekannteste Framework ist jQuery. Frameworks helfen Entwicklern sonst schwer
+zu realisierende Features einfacher umzusetzen, so bietet jQuery mehrere
+Schnittstellen mit der ein Zugriff auf verschiedene Hardwarekomponenten, wie
+zum Beispiel die zur Standordbestimmung, möglich ist. Schon frühere Versionen
+von HTML unterstützten den Austausch von Daten über verschiedene Formate
+wie XML, JSON oder andere.
+
+\subsection{Multimedia}
+\begin{itemize}
+  \item{Videounterstützung}
+  \item{Audiounterstützung}
+  \item{Spracheingaben}
+\end{itemize}
+Eine der größten Neuerungen und Grund für den Schlagabtausch zwischen HTML5
+und Adobe Flash bildet die Integration von nativen Audio- und Videoelementen
+und deren Unterstützung. Beide Elemente können dabei über seperate
+Schnittstellen angesprochen und gesteuert werden. Damit bietet sich eine
+Möglichkeit an Multimedia-Inhalte in Webseiten einzubinden, ohne auf den Adobe
+Flash Player zurückgreifen zu müssen. Einziger Wehrmutstropfen ist die noch
+zum Teil unvollständige Unterstützung durch bestehende Browser, jedoch sollten
+zukünftige Aktualisierungen dieses Problem beseitigen. In Kombination mit
+weiteren Neuerungen von HTML5 und JavaScript lassen sich interessante und
+komplexe multimediale Anwendungen erstellen. So kann Aufgrund der neuen
+Spracheingabeschnittstelle auf das Mikrofon des Computers zugegriffen und
+Spracheingaben verarbeitet werden.
+
+\subsection{Sonstiges}
+\begin{itemize}
+  \item{
+    Kompatibilität und Unterstützung auf unterschiedlichen Plattformen und
+    Endgeräten
+  }
+  \item{Ansätze einer Programmiersprache}
+\end{itemize}
+HTML5 Inhalte lassen sich auf jeder und für jede Plattform erstellen.
+Die Kompatibilität herzustellen liegt dabei nicht in der Hand des Entwicklers,
+sondern in denen der unterschiedlichen Browserhersteller. Durch die steigende
+Anzahl an Schnittstellen und den vielen Neuerungen nimmt JavaScript immer mehr
+die Form einer komplexen Programmiersprache an, mit deren Hilfe komplexe
+Anwendungen realisiert werden können.
+
+\subsection{HTML5 Spezifisch}
+\begin{itemize}
+  \item{Semantisches Markup}
+  \item{Suchmaschinenoptimierung}
+\end{itemize}
+Semantisches Markup ist wohl das Feature das HTML im allgemeinen auszeichnet.
+Dank der angewandten Semantik ist es möglich, Inhalte mit, für den Computer
+verständliche, Bedeutung zu versehen. Ein Feature das sich bereits im
+Bereich der Suchmaschinenoptimierung als essenziel erwiesen hat und mit der
+steigenden Bedeutung von Suchmaschinen nicht zu unterschätzen ist. Einige
+interessante Neuerungen von HTML5 umfassen die Erweiterungen der bestehenden
+Tags mit noch aussagekräftigeren Elementen.
+
+\section{Aktueller Einsatz}
+Keine andere Technologie konnte bis jetzt für einen ähnlich großen Hype sorgen
+wie HTML5. Von vielen wird die neue Spezifikation als die einzige Technologie
+angesehen, die notwendig sein wird, um in Zunkunft professionelle,
+anspruchsvolle und interaktive Webinhalte zu erstellen. Gegenwärtig werden
+diese Erwartungen allerdings noch nicht vollständig erfüllt. Die aktuelle
+Version, die veröffentlicht wurde, ist lediglich ein Entwurf für den finalen
+Webstandard. Bis dieser Standard verabschiedet wird, dauert es noch bis ins
+Jahr 2022. Das hat zur Folge, dass Entwickler mit Änderungen im
+Funktionsumfang und der bestehenden Features rechnen können.
+\newline\newline
+Nichts desto trotz kann und soll der neue Standard für die Entwicklung
+von Webseiten und -applikationen genutzt werden. Mit HTML5 wurden viele
+Altlasten älterer HTML Versionen beseitigt und einige neue und zukunftsichere
+Funktionen hinzugefügt. In einigen Bereichen wie Multimedia, Interaktivität
+und Schnittstellen steht HTML5 dem bisherigen Platzhirsch Adobe Flash in
+den erwähnten Bereichen kaum noch nach. Im direkten Vergleich zu Adobe Flash
+löst HTML5 einige Aufgaben deutlich besser und verbraucht dabei auch noch
+weniger Ressourcen und Bandbreite.
+\newline\newline
+Mit der kürzlichen Umstellung großer Videoportalen (beispielsweise Youtube)
+von Adobe Flash auf HTML5 lässt sich eine eindeutige Bewegung feststellen.
+Allerdings wird bis jetzt die HTML5 Variante lediglich als zusätzliche
+Möglichkeit neben Flash angeboten. In Zukunft soll jedoch komplett auf die
+Verwendung von Flash verzichtet werden. Was die Umstellung bei Webseiten
+betrifft, geht diese wesentlich gemächlicher voran.
+\newline\newline
+Im Gegensatz zu Adobe Flash ist für die Verbreitung von HTML5 nicht nur
+der Einsatz des Standards sondern auch die Unterstützung der Features durch
+die verschiedenen Browser notwendig. Leider zeigt sich hierbei eine der
+Schwächen von HTML5: Längst nicht alle Features werden von allen Browsern
+unterstützt. Ganz im Gegenteil, interessante neue Funktionen werden
+von vielen Browsern nur teilweise oder garnicht unterstützt.
+Das führt unweigerlich zu sehr unterschiedlichen Darstellungen einer
+Webseite auf mehreren Browsern und damit zu einem Mehraufwand und höheren
+Kosten in deren Entwicklung und Testung.
+
+\section{Technologieverbund}
+Wenn von HTML5 gesprochen wird, ist in den häufigsten Fällen der Verbund
+aus der Markupsprache HTML in der Version 5, der deklarativen Sprache
+CSS in der Version 3 und der Skriptsprache JavaScript (auch bekannt
+als ECMAScript) gemeint. Alle drei Technologien greifen ineinander und
+bieten in ihrer Gesamtheit die neuen Features von HTML5.
+% Bild mit Triangle HTML Struktur/Inhalt, CSS Präsentation/Darstellung, JS Logik
+
+\subsection{HTML5}
+HTML ermöglicht es, Inhalte im Web zu strukturieren und darzustellen.
+Zusätzlich bietet HTML Funktionen um Texte, Bilder, Hyperlinks,
+Videos, Audio und andere multimediale Inhalte semantisch auszuzeichnen
+und damit für andere Systeme, zum Bespiel dem Computer, verständlich
+zu machen. Jegliche Inhalte, die im Web dargestellt werden sollen, müssen
+in die HTML-Struktur eingebunden werden, selbst solche, die zur Darstellung
+Plug-Ins von anderen Anbietern wie beispielsweise Adobe Flash benötigen.
+\newline\newline
+Die gewünschten Inhalte werden dabei in verschiedene HTML-Elemente
+eingebettet. Jedes dieser HTML-Elemente erfüllt einen bestimmten Zweck und
+dieser reicht von Überschriften und Paragraphen bis hin zu Hyperlinks und
+Bildern. Zusätzlich können diese Elemente durch verschiedene Attribute noch
+genauer ausgezeichnet werden. Generische Elemente wie das div-Element,
+ergänzen den begrenzten Elemente-Umfang, um nicht eindeutig zuordenbare
+Inhalte auf einer Webseite zu platzieren. Über diesen Weg kann jede
+Form von Inhalt erstellt werden.
+\newline\newline
+Für HTML5 wurden verschiedene Ziele festgelegt die es zu erreichen galt.
+Diese Ziele dienten zusätzlich dem Zweck, den neuen Standard konkurrenzfähig
+und zukunftssicher zu machen. Die Ziele waren:
+%http://www.w3.org/TR/html-design-principles/
+\begin{description}
+  \item[Kompatibilität:]
+  Bereits bestehende Inhalte müssen weiterhin verwendet werden können. Neue
+  Funktionen des Standards dürfen die bestehenden Inhalte nicht verändern oder
+  beeinflussen.
+  \item[Verwendbarkeit:]
+  Neue Funktionen sollen bestehende Probleme lösen und die Entwicklung
+  einfacher machen.
+  \item[Sicherheit:]
+  Ein wichtiger Aspekt, der im Web immer mehr an Bedeutung gewinnt.
+  \item[Konsistenz:]
+  Sowohl in HTML als auch in XHTML sollen XML-Elemente genutzt werden können.
+  Die Sprachen greifen dabei auf eine gemeinsame Dokumentation zurück.
+  \item[Vereinfachung:]
+  HTML soll deutlich vereinfacht und durch konkrete Fehlermeldungen schneller
+  und einfacher korrigierbar werden.
+  \item[Universalität:]
+  Inhalte sollen in jeder Sprache und auf allen Endgeräten sowie Systemen
+  darstellbar sein.
+  \item[Zugänglichkeit:]
+  Inhalte und Funktionen sollen jedem zugänglich sein. Dies entspricht dem
+  OpenSource-Gedanken.
+\end{description}
+%
+Bis dato wurden bereits einige Ziele erreicht. Bis zur offiziellen
+Verabschiedung des Standards im Jahr 2022 werden mit Sicherheit alle Ziele
+erreicht werden.
+
+\subsection{CSS3}
+Mittels ``Cascading Stylesheets'', oder kurz CSS, wird die Darstellung von
+Elementen in einem HTML Dokument kontrolliert. So ist es möglich die
+Positionierung und Attribute wie Farbe, Schattierung oder ähnliches, von
+Elementen exakt zu definieren. CSS ist damit das Werkzeug der Wahl um
+Designvorgaben möglichst genau umzusetzen.
+\newline\newline
+Die Trennung von HTML und CSS symbolisiert die Trennung von Inhalt und
+Design. Dies ermöglicht eine unterschiedliche Darstellung der selben Inhalte
+durch unterschiedliche Stylesheets für verschiedene Endgeräte oder den Druck,
+ohne dabei den Inhalt selbst anpassen zu müssen.
+\newline\newline
+Der Name Cascading Stylesheets ist abgeleitet von den zur Verfügung stehenden
+Vererbungsregeln, die das Format zulässt. Durch die Vererbungsregeln ist es
+möglich, ein große Auswahl an Elementen gleich aussehen zu lassen und
+dennoch jedes beliebige Element individuell anzupassen. Die von
+HTML gelieferten Attribute ID und Class dienen zur Unterscheidung von
+einmalig auftretenden Elementen (id) und ganzen Gruppierungen (class).
+\newline\newline
+Mit dem Level 3 des Cascading Stylesheet Standards kommen viele neue
+Eigenschaften hinzu, die die Gestaltung von Elementen noch schneller und
+einfacher machen. Mit CSS2 konnten vorwiegend einfache Darstellungsparameter
+wie Farbe, Rahmen, Innenabstand und Aussenabstand sowie die genau
+Positionierung im Dokumentenfluss definiert werden. CSS3 ermöglicht nun
+etliche grafische Effekte wie Verläufe, Schatten oder abgerundete Ecken.
+Zusätzlich zählen zu den wichtigsten neuen Funktionen von CSS3 die Erstellung
+von einfachen Animationen, das Einbinden und Modifizieren von Schriftarten
+sowie Transformationen und Skalierungen von Inhalten.
+\newline\newline
+Seit dem Jahr 2000 ist der CSS3 Standard in Entwicklung und die komplette
+Unterstützung durch Browserhersteller schreitet immer weiter voran. Vor
+allem durch das Aufkommen von HTML5 werden die Eigenschaften immer stärker in
+den Mittelpunkt gerückt. Aus diesem Grund werden die Funktionen von CSS3 oft
+dem HTML5 Standard zugeordnet.
+
+\subsection{JavaScript}
+Die Skriptsprache JavaScript übernimmt in dem Technologieverbund die logische
+Ebene. Die Verwendung von HTML als eigenständige Technologie bietet nur die
+statische Erstellung und Darstellung von Inhalten. Durch JavaScript lassen
+sich HTML-Elemente allerdings dynamisch verändern. Ein Trend der sich bei
+der Entwicklung von modernen Webseiten durchgesetzt hat und mittlerweile
+nicht mehr weg zu denken ist. JavaScript wurde 1995 offiziell von Brendan Eich
+eingeführt und ist aktuell in der Version 1.8.5 verfügbar. Allerdings
+unterstützen ein Großteil lediglich die Version 1.5 vollständig.
+\newline\newline
+Die Skriptsprache ermöglicht die Manipulation von HTML-Elementen auf der
+im Browser aufgerufenen Seite, das dynamische Erstellen neuer Elemente oder
+das dynamische Nachladen von Inhalten mit Hilfe von XML und AJAX. Besonders
+für einfache Effekte wie ein Dropdown-Menü oder das Einblenden von Tooltips
+bietet sich der Einsatz von JavaScript an.
+\newline\newline
+Als dritte Säule der Webseitenerstellung kümmert sich JavaScript daher vor
+allem um die Dynamik und Interaktivität von modernen Webseiten. Diese
+Funktionalitäten werden heutzutage von Nutzern erwartet. Die steigenden
+Erwartungen und die immer komplexer werdenden Webseiten fordern auch, dass
+JavaScript diesen gewachsen ist. Diese Anforderungen und die fehlende
+Unterstützung der aktuellsten Skript-Versionen machen die Entwicklung
+unverhältnismäßig schwer, saubere Lösungen für an sich einfache Probleme zu
+entwickeln. Für diesen Fall kommen die sogenannten JavaScript Frameworks ins
+Spiel. Frameworks bieten Anhand von kompatibler JavaScript Versionen neue
+Funktionalitäten. Besonders um einfach, sicher und effizient Animationen oder
+Effekte zu realisieren oder Elemente zu manipulieren bietet sich die Nutzung
+von Frameworks an. Einige der bekanntesten Frameworks sind dabei Prototype,
+MooTools und das mit Abstand am häufigsten verwendete Framework jQuery.
+\newline\newline
+Nur durch das Zusammenspiel des Grundgerüsts HTML, des Designs CSS3 und der
+Interaktivität durch JavaScript wird HTML5 zu dem Gesamtprodukt, welches in
+Zukunft die Entwicklung des Webs prägen wird und zu einem ernst zu nehmenden
+Konkurrenten für bereits etablierte Softwarelösungen wie Adobe Flash werden
+lässt.
+
+\section{Notwendigkeit von HTML5}
+Die letzte Version von HTML wurde gut 10 Jahre lang eingesetzt. Mit dem
+unglaublichen schnellen Wachstum im Bereich der mobilen Endgeräte, wie
+Smartphones und Tablets, und den steigenden Erwartungen der Nutzer im Bezug
+auf Inhalte und Funktionalitäten konnte die bestehende Version den gegebenen
+Ansprüchen nicht mehr gerecht werden. Um sowohl die geforderten Anforderungen
+zu erfüllen und zukunftssicher zu sein ist eine neue Version der Sprache
+notwendig. HTML5 kann diese Version werden.
+\newline\newline
+Die bisher vergleichweise rasante Entwicklung von HTML5 wird sich daher auch
+in Zukunft kaum verlangsamen. Anders als bei einer proprietären Software
+beteiligen sich viele der führenden Unternehmen im Bereich Internet an der
+Entwicklung des neuen Standards. Damit kann man von einer umfassenden
+Unterstützung durch verschiedene Browser, Endgeräte und Schnittstellen
+ausgehen.
+\newline\newline
+Um technische Neuerungen und moderne Webseiten zu gestalten mussten bisher
+immer die Funktionen von Adobe Flash oder ähnlicher Software genutzt werden.
+Die neuen Features von HTML5 sollen hingegen eine Möglichkeit bieten
+komplett auf Software-Lösungen von Drittanbieteren zu verzichten und dabei
+einen einheitlichen Standard für alle Geräte und Plattformen zu schaffen.
+\newline\newline
+Vor allem im Bereich der Multimediainhalte wie Videos, Audio, Animationen, 3D
+und Interaktion musste Adobe Flash genutzt werden. Zu beachten ist dennoch,
+dass Software von Drittanbietern neben technischen Vorteilen auch einige
+Nachteile mit sich bringen. Einer der größten Nachteile stellt die kaum
+oder nur mit sehr viel Aufwand verbundenen Suchmaschinen-Optimierung von
+Flash-Inhalten dar. Ein Problem, dass in einer Zeit in der Online-Marketing
+immer mehr an Bedeutung gewinnt, nicht zu unterschätzen ist. Weiters
+werden laufend neue Sicherheitsproblemem bei den angebotenen Plug-Ins, die
+notwendig sind um entsprechende Inhalte darzustellen, bekannt und nur langsam
+oder auch unzureichend behoben. Aufgrund der vielen Nachteile wurde der Ruf
+der Kritiker, von Adobe Flash und proprietärer Software, nach einer
+Alternative immer lauter.
+\newline\newline
+Mit der Entscheidung von Apple Adoble Flash auf ihren mobilen Endgeräten
+nicht mehr zu unterstützen, führte außerdem dazu, dass schnell Alternativen
+entwickelt werden mussten. HTML5 stellt dabei eine optimale Lösung dar.

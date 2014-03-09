@@ -11,70 +11,607 @@
 
 \chapter{HTML5 Canvas und Adobe Flash: Vergleich und mögliche Auswirkungen}
 
-\section{Vergleich von HTML5 Canvas und Adobe Flash}
-Proprietär vs Standard
-\subsection{Verfügbarkeit}
-\subsection{Audio und Video}
+\section{Vorraussetzungen}
+Sowohl Nutzer als auch Entwickler benötigen um HTML5 und Adobe Flash einsetzen
+zu können verschiedene Tools. Auf Entwicklerseite sind die Möglichkeiten sehr
+vielfältig, sodass eine vollständige Auflistung den Rahmen dieser Arbeit
+sprengen würde. Auf Nutzerseite ist die Auswahl der Tools ebenfalls breit
+gefächert, allerdings ist die Anzahl der notwendigen Programme vergleichweise
+geringer und kann daher genauer untersucht werden.
+\newline\newline
+Die Entwicklung von Flash Anwendungen setzt einen Editor vorraus, der in der
+Lage ist ActionScript Code zu kompilieren. Dabei gibt es eine umfangreiche
+Auswahl an verschiedenen Editoren, die nicht zwingend von Adobe kommen müssen.
+Adobe bietet mit Adobe Flash CS6 eine Entwicklungsumgebung, welche sämtliche
+Funktionen von Flash und ActionScript unterstützt und dem Entwickler neben dem
+Editieren des ActionScript Codes eine grafische Oberfläche bietet, die es
+vereinfacht, Animationen zu erstellen oder Grafiken einzubinden, allerdings
+auch sehr kostspielig ist. Über die kostenlos erhältlichen Editoren können
+zwar alle Funktionen von ActionScript genutzt werden, aber es werden keine
+Tools zur Erstellung von Grafiken und Animationen angeboten.
+\newline\newline
+Im Vergleich dazu benötigen HTML5 Entwickler lediglich einen Editor, mit dem
+textbasierte Inhalte erstellt werden können und einen Browser, der diese
+Inhalte korrekt darstellt. Die Lösungen hierfür sind nahezu grenzenlos,
+weshalb Entwickler aufgrund ihrer Präferenzen die für sie beste Lösung wählen
+können. Der komplette Aufbau der Webseite wird im Editor in der entsprechenden
+HTML5 Syntax geschrieben. Multimediale Inhalte lassen sich ebenfalls über das
+Markup einbinden, und können zuvor mit den entsprechenden Programmen den
+Wünschen angepasst werden. Adobe ist dabei eines der ersten Unternehmen, die
+Softwarelösungen bieten, mit denen Webseiten und Animationen in HTML5 mittels
+einer grafischen Oberfläche erstellt und bearbeitet werden können. In Zukunft
+ist es möglich, dass andere Unternehmen diese Idee aufgreifen und ähnliche
+Programme anbieten werden, sodass HTML5 im Bezug auf grafische
+Entwicklungsumgebungen Adobe Flash in nichts nachstehen wird.
+\newline\newline
+Die technischen Vorraussetzungen für Nutzer von Flash-Inhalten sind relativ
+einfach zu erfüllen. Der Nutzer müssen lediglich eine aktuelle Version des
+Adobe Flash Players auf seinem System installiert haben, sei es als Browser
+Plug-In oder als Standalone Version, und das verwendete System muss die
+Hardware-Mindestanforderungen von Adobe erfüllen. Da diese
+Mindestanforderungen äusserst gering sind, sollten alle aktuellen Systeme,
+unabhängig ob mobil oder Desktop, in der Lage sein Flash-Inhalte abzuspielen.
+Da der Adobe Flash Player auf jedem gängigen System verwendet werden kann,
+ist auch die Entwicklung über mehrere Plattformen in der Regel kein Problem.
+\newline\newline
+Für die Nutzung von HTML5 Inhalten wird lediglich ein Browser vorrausgesetzt,
+der diese korrekt darstellen kann. Der Entwickler hat dafür zu
+sorgen, dass jeder Browser die Seite soweit korrekt darstellt, sodass der
+Nutzer auf die Inhalte zugreifen kann. Das Problem hierbei ist, dass der
+Browsermarkt sehr stark fragmentiert ist und diese sowohl von Hersteller zu
+Hersteller als auch von Version zu Version eine unterschiedlich
+fortgeschrittene Unterstützung von HTML5 anbietet. Die Hardware-
+Mindestanforderungen sind dabei an den jeweiligen Browser gebunden. Allerdings
+sind auch diese sehr gering wodurch auch schon auf mobilen Systemen Browser
+integriert sind die eine sehr fortgeschrittene Unterstützung von HTML5
+gewährleisten.
+
+\section{Betriebssysteme}
+HTML5 ist ein offener Standard. Das bedeutet, dass die Technologie nicht
+von einem großen Softwarehersteller entwickelt wird und somit für die
+Öffentlichkeit frei zugänglich ist. Das hat zur Folge, dass der Grad der
+Unterstützung von HTML5 abhängig von der Einbindung in den Browser der
+jeweiligen Browserhersteller ist. Jedes System mit einer aktuellen Version
+eines Browsers kann damit die Funktionen von HTML5 verwenden und darstellen.
+\newline\newline
+Adobe Flash stellt das extreme Gegenteil zu HTML5 dar. Die Technologie ist
+eine von Adobe entwickelte proprietäre Software und setzt vorraus, dass für
+Browser ein Plug-In und für das System der Adobe Flash Player installiert sein
+muss, um Flash-Inhalte darstellen zu können. Damit hat Adobe die Macht über die
+Entscheidung der zu unterstützenden Plattformen. Sollte also Adobe sich dazu
+entscheiden, eine bestimmte Plattform nicht mehr zu unterstützen, haben die
+Nutzer dieser Plattform keine Möglichkeit mehr Flash-Inhalte zu konsumieren.
+Apple hat sich aus diesem Grund dazu entschieden, auf ihren mobilen Engeräten
+komplett auf die Unterstützung von Adobe Flash zu verzichten und ihre
+Aufmerksamkeit auf offene Standard wie HTML5, CSS3 und JavaScript zu richten.
+\newline\newline
+Die gängigsten Desktop-Betriebssysteme (Windows, MacOS und Linux)
+unterstützen sowohl HTML5, mittels diverser Browser, und Adobe Flash, mittels
+Plug-In oder Player, und können damit Inhalte beider Technologien darstellen.
+Bei mobilen Betriebssysteme sind immer vorinstallierte Browser vorhanden,
+die einen Großteil der Features von HTML5 unterstützen. Für die Unterstützung
+von Adobe Flash müssen zusätzliche Applikationen installiert werden.
+\newline\newline
+Um Flash-Inhalte auf Apples mobilen Endgeräte nutzen zu können, bietet Adobe
+eine Softwarelösung, wodurch Flash Inhalte in HTML5 Inhalte umgewandelt werden.
+Allerdings gilt es dabei zu beachten, dass die umgewandelten Inhalte nur
+selten den originalen Inhalten entsprechen, aufgrund der fehlenden Funktionen
+seitens HTML5 oder der hohen Komplexität der Inhalte. Adobe hat bereits
+angekündigt, die Entwicklung des Adobe Flash Players für mobile Plattformen
+einzustellen und sich auf Desktop Plattformen zu konzentrieren. Mit dieser
+Entscheidung seitens Adobe in Zukunft der mobile Bereich sicherlich HTML5
+gehören.
+
+\section{Browserunterstützung}
+Wie im letzten Abschnitt bereits beschrieben, ist die Darstellung von
+HTML5-Inhalten abhängig von dem genutzten Browser. Unter den Browsern
+gibt es eine breite Auswahl, die alle eine unterschiedlich fortgeschrittene
+Unterstützung der Funktionen und Features von HTML5 bieten. Das führt
+automatisch zu dem Problem, dass eine Webseite in unterschiedlichen
+Browsern unterschiedlich dargestellt wird. Wie weit die Darstellung
+dabei vom Original abweicht hängt von dem jeweiligen Browser ab.
+Das stellt eines der größten Probleme im Bereich der Webentwicklung
+mit den offenen Standards dar. Ein Entwickler muss sich darum bemühen,
+dass eine möglichst große Anzahl an Nutzern die angebotene Seite/Applikation
+optimal nutzen kann.
+\newline\newline
+An dieser Stelle soll daher ein Überblick darüber gegeben werden, welche
+Browser welche Features und Funktionen von HTML5 unterstützen und der
+Vergleich aufgestellt werden, ob diese mit Adobe Flash auch
+erstellt/dargestellt werden können.
+%caniuse grafik
+
+\section{Leistungstests}
+Bei der Auswahl einer Technologie ist neben den gebotenen Funktionen, dem damit
+verbundenen Entwicklungs- und Lernaufwand und den Kosten auch die
+Leistungsfähigkeit auf verschiedenen Betriebssystemen und Endgeräten
+entscheidend. Speziell die Anzeigerate bei Videos und Animationen sowie die
+Belastung des Prozessors spielen eine tragende Rolle, da die Anzeigerate
+möglichst konstant und hoch und zeitgleich die Belastung des Prozessors
+möglichst gering sein soll.
+\newline\newline
+Um diese Faktoren austesten zu können werden im Internet verschiedene
+Tests angeboten, die eine bestimmte Situation simulieren und die
+entsprechenden Ergebnisse liefern. Diese Tests, auch bekannt unter dem Namen
+``Benchmarks'', decken dabei einen möglichst großen Testbereich ab. So reichen
+diese von der Darstellung von Grafiken über das Berechnen von Partikeln
+bis hin zu einem Belastungstest des Prozessors.
+\newline\newline
+Die Benchmark Ergebnisse können dabei lediglich als Richtwert angesehen
+werden, da diese abhängig von dem beim Test verwendeten Betriebssystem und der
+verwendeten Software (Browserhersteller und Version bzw. Version des Flash
+Players) stark voneinander abweichen können.
+\newline\newline
+In den folgenden Abschnitten werden verschiedene Benchmarks verwendet, um
+die Leistung von HTML5 und Adobe Flash möglichst genau zu vergleichen.
+Bei den Benchmarks wird darauf geachtet, dass Funktionen verwendet werden,
+die sowohl HTML5 als auch Adobe Flash zur Verfügung stellen damit für beide
+Technologien die gleichen Bedingungen bestehen.
+
+\subsubsection{Testumgebung}
+
+Um sämtliche am Markt verfügbaren Browser zu testen, werden zwei
+unterschiedliche Testsysteme verwendet. Die Testsysteme werden wie folgt
+spezifiziert:
+\begin{itemize}
+  \item Gerät: Macbook Air (13 Zoll, Mitte 2012)
+  \item Betriebssystem: OS X Version 10.9.1 (Mavericks)
+  \item Prozessor: 2 GHz Intel Core i7
+  \item Speicher: 8 GB 1600 MHz DDR3
+  \item Grafikkarte: Intel HD Graphics 4000 1024 MB
+  \item Festplatte: Flash-Speicher (SSD)
+\end{itemize}
+und
+\begin{itemize}
+  \item Gerät: HP Compaq nc6400 (13 Zoll)
+  \item Betriebssystem: Windows 7 Professional, Service Pack 1
+  \item Prozessor: 2 GHz Intel Core Duo 2 T7200
+  \item Speicher: 2 GB
+  \item Grafikkarte: ATI Mobility Radeon X1300 256 MB
+  \item Festplatte: HDD
+\end{itemize}
+
+\newline\newline
+Die Auswahl der Browser wird wie folgt spezifiziert:
+\begin{itemize}
+  \item Firefox 26.0
+  \item Chrome 32.0.1700.102
+  \item Opera 19.0.1326.47
+  \item Safari 7.0.1 (nur OS X)
+  \item Internet Explorer 11 (nur Windows)
+\end{itemize}
+
+\newline\newline
+Die getestete Version vom Adobe Flash Player ist:
+\begin{itemize}
+  \item Adobe Flash Player 12.0.0.38
+\end{itemize}
+
+\subsection{GUIMark 2: The rise of HTML5}
+% http://www.craftymind.com/guimark2/
+GUIMark 2 ist ein kostenloser Benchmark entwickelt von Sean Christmann für
+HTML5 und Adobe Flash. Christmann ist davon überzeugt, dass bei einer vollen
+Ausschöpfung der Rendering Pipelines einfacher entschieden werden kann, welche
+Technologie am Besten für interaktiven Inhalt im Web genutzt werden soll.
+Laut Christmann tendieren Entwickler hauptsächlich dazu die Nutzbarkeit der
+Technologien zu vergleichen, während in Wirklichkeit die meiste
+Prozessorleistung für interne Rendering Schnittstellen genutzt wird.
+\newline\newline
+Der Benchmark ist in drei unterschiedliche Tests unterteilt: Vektor-, Bitmap-
+und Textdarstellung. Die Testfälle sind dabei möglichst realen
+Alltagsszenarien nachempfunden. Zusätzlich sind einige Testfälle vorhanden die
+ebenfalls für mobile Endgeräte entwickelt wurden, um die Aussagen von Steve
+Jobs, im Bezug auf die mobile Leistungsfähigkeit von HTML5 und Adobe Flash, zu
+hinterfragen.
+\newline\newline
+Bei den folgenden Tests wird die Anzeigerate in Bilder pro Sekunde (fps,
+Frames per Second) gemessen und miteinander verglichen.
+
+\subsubsection{Vector Charting Test}
+Dieser Benchmark wurde konzipiert um die Funktionen der Vektor APIs mittels
+einem animierten Diagramm auszulasten. Das Diagramm wird dabei durch den
+massiven Gebrauch von Linien und aufwendigen Transparenzfüllungen erstellt.
+% Statistik
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{3cm}| >{\centering\arraybackslash}p{3cm} | >{\centering\arraybackslash}p{3cm}|}
+
+  \hline & HTML5 & Flash \\ \hline
+  OSX 10.9.1 & & \\ \hline
+  Firefox & 6,86 fps & 43,85 fps \\ \hline
+  Chrome & 30,62 fps & 48,38 fps \\ \hline
+  Opera & 29,86 fps & 46,98 fps \\ \hline
+  Safari & \textbf{55.76 fps} & \textbf{49.96 fps} \\ \hline
+  & i.D. 30,7 fps & i.D. 47,3 fps \\ \hline
+  Windows 7 SP1 & & \\ \hline
+  Firefox & 10,05 fps & 23,96 fps \\ \hline
+  Chrome & 12,42 fps & \textbf{59,89 fps} \\ \hline
+  Opera &  \textbf{13,52 fps} & 15,26 fps \\ \hline
+  IE & 10,24 fps & 22,43 fps \\ \hline
+  & i.D. 11,6 fps & i.D. 30,39 fps \\ \hline
+
+\end{tabular}
+\end{center}
+\caption{Testergebnisse - Vector Charting Test}
+\end{table}
+Auf dem Macbook Air zeigt sich, dass Apples Browser Safari mit rund 55fps die
+beste HTML5 Leistung bringt und die Leistung von Flash überall gleich konstant
+bleibt.
+% 1 Pixel Stroke Results
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{3cm}| >{\centering\arraybackslash}p{3cm} |}
+
+  \hline & HTML5 \\ \hline
+  OSX 10.9.1 & \\ \hline
+  Firefox & 44,91 fps \\ \hline
+  Chrome & 54,43 fps \\ \hline
+  Opera & 54,68 fps \\ \hline
+  Safari & \textbf{56.92 fps} \\ \hline
+  Windows 7 SP1 &  \\ \hline
+  Firefox & 10.54 fps \\ \hline
+  Chrome & 27.36 fps \\ \hline
+  Opera & \textbf{30.38 fps} \\ \hline
+  IE & 10.51 fps \\ \hline
+
+\end{tabular}
+\end{center}
+\caption{Testergebnisse - Vector Charting Test 1 Pixel Stroke}
+\end{table}
+% Bild Test
+
+\subsubsection{Bitmap Gaming Test}
+Der Bitmap Test simuliert ein Spiel auf dem Prinzip des Towerdefense.
+Dabei wird eine Vielzahl an Bitmaps pro Bild unterschiedlich animiert. Mit
+jedem fertigen Bild muss dieses auch wieder gelöscht werden um alle neuen
+Zustände im neuen Bild darstellen zu können. Um einen Tiefeneffekt zu erzeugen
+werden Bitmaps auf unterschiedlichen Ebenen positioniert (Z Depth Ordering)
+und um die Bitmaps zu skalieren wird Anti-alising verwendet.
+% Statistik
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{3cm}| >{\centering\arraybackslash}p{3cm} | >{\centering\arraybackslash}p{3cm}|}
+
+  \hline & HTML5 & Flash \\ \hline
+  OSX 10.9.1 & & \\ \hline
+  Firefox & 20,9 fps & 36,95 fps \\ \hline
+  Chrome & 55,61 fps & 35,02 fps \\ \hline
+  Opera & 55,86 fps & 36,28 fps \\ \hline
+  Safari & \textbf{57.03 fps} & \textbf{39.33 fps} \\ \hline
+  & i.D. 47,35 fps & i.D. 36,9 fps \\ \hline
+  Windows 7 SP1 & & \\ \hline
+  Firefox & 7,34 fps & \textbf{20,09 fps} \\ \hline
+  Chrome & 14,68 fps & 17,55 fps \\ \hline
+  Opera & \textbf{18,71 fps} & 18,79 fps \\ \hline
+  IE & 10,66 fps & 18,09 fps \\ \hline
+  & i.D. 12,85 fps & i.D. 18,63 fps \\ \hline
+
+\end{tabular}
+\end{center}
+\caption{Testergebnisse - Bitmap Gaming Test}
+\end{table}
+% Bild Test
+
+\subsubsection{Text Column Test}
+Bei diesem Test wird die Text Layout und Rendering Engine von HTML und Flash
+ausgelastet. Es werden Custom Fonts, die mit CSS3 eingeführt wurden,
+eingebunden und Multibyte Character Strings dargestellt. Anders als die
+vorherigen Benchmarks stellt dieser Testfall kein reales Testszenario dar,
+sondern dient der Analyse, wie viel Zeit benötigt wird, um eine textlastige
+Webseite vollständig zu laden. Christmann nennt diesen Test den "`Eisberg"'-
+Test, da ungefähr 80\% der Prozessorbelastung ausserhalb des Renderviews (des
+sichtbaren Bereichs) entstehen. Dennoch soll der Test realistische Ergebnisse
+liefern, da beim Scrollen berechnet werden muss, wieviele Zeilen des Textes nun
+in bzw. aus dem Renderview bewegt werden müssen. Bei HTML Webseiten geschieht
+dies immer, sobald eine Seite geöffnet wird und die Auflösung des genutzen
+Monitors zu klein ist, um diese komplett anzeigen zu können.
+% Statistik
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{3cm}| >{\centering\arraybackslash}p{3cm} | >{\centering\arraybackslash}p{3cm}|}
+
+  \hline & HTML5 & Flash \\ \hline
+  OSX 10.9.1 & & \\ \hline
+  Firefox & 28,09 fps & 32,3 fps \\ \hline
+  Chrome & \textbf{31,85 fps} & \textbf{35,74 fps} \\ \hline
+  Opera & 28,54 fps & 30,08 fps \\ \hline
+  Safari & \textbf{31,85 fps} & 34,8 fps \\ \hline
+  & i.D. 30,08 fps & i.D. 33,23 fps \\ \hline
+  Windows 7 PS1 & & \\ \hline
+  Firefox & \textbf{16,15 fps} & 11,53 fps \\ \hline
+  Chrome & 15,29 fps & \textbf{18,74 fps} \\ \hline
+  Opera & 11,39 fps & 11,38 fps \\ \hline
+  IE & 10,6 fps & 11,08 fps \\ \hline
+  & i.D. 13,36 fps & i.D. 13,18 fps \\ \hline
+
+\end{tabular}
+\end{center}
+\caption{Testergebnisse - Text Column Test}
+\end{table}
+% Bild Test
+
+\subsection{GUIMark 3: Mobile Showdown}
+
+\subsection{The Man in Blue Animation Benchmark}
+
 \subsection{Animation}
-\subsection{Spiele}
-\subsection{Werbung}
-\subsection{Web-Applikationen}
 
-\section{Mögliche Auswirkungen}
-\subsection{Der Wandel von dem allgegenwärtigen Flash zu den neuen Webstandards}
-\subsection{Die Zukunft von HTML5 und Flash}
-\subsection{Unternehmen und ihre Einstellung zu neuen Ideen}
+\subsection{Video}
 
-\chapter{Auswirkungen}
-\section{Browser}
-\subsection{Chrome und Safari (WebKit)}
-Chrome von Google und Safari von Apple bauen beide auf der HTML-Rendering-Engine
-WebKit zur Darstellung von Webinhalten auf. Google Chrome konnte zunehmend mit
-dem bis dato meist genutzen Webbrowser Internet Explorer konkurrieren, bis es
-nach den Angaben des globalen Statistiksunternehmens StatCounter erstmals im Mai
-2012, weltweit die Spitzenposition einnehmen konnte. Mit einem
-durchschnittlichen Anteil von 35\% für Google Chrome und 7\% für Apple Safari
-stellen diese die beliebtesten Webbrowser dar.
+\section{Besonderheiten}
+
+% http://www.oesterreich.gv.at/site/5566/default.aspx#a4
+% http://www.barrierefreies-webdesign.de/wcag2/
+\subsection{Barrierefreiheit}
+Barrierefreiheit im Internet bedeutet, Webseiten so zu gestalten, dass
+jeder Mensch unabhängig von seinen körperlichen Einschränkungen die
+Inhalte der Webseite nutzen kann. Dabei stellt besonders die Aufbereitung der
+Inhalte für Menschen mit Sehbehinderungen eine Schwierigkeit dar.
+Nichtsdestotrotz soll diese und auch andere Behinderungen bei der
+Aufbereitung von Inhalten für das Internet berücksichtigt werden.
+\newline\newline
+Das W3C hat bereits im Jahre 1999 die erste Empfehlung für barrierefreies
+Internet ausgesprochen. Für das Erstellen barrierefreier Webseiten werden,
+seit 2008, Richtlinien in den Web Content Accessibility Guidlines (WCAG 2.0)
+festgehalten und der Öffentlichkeit zugänglich gemacht. Die WCAG 2.0 bilden
+nun einen flexibleren und testbareren, neuen Standard für barrierefreies
+Webdesign. Dieser deckt Zugänglichkeitsanforderungen für alle
+Arten von Web-Inhalten (Text, Bilder, Audio oder Video) sowie Web-
+Applikationen ab und definiert technologieunabhängige Richtlinien und
+Erfolgskriterien.
+\newline\newline
+Dabei sind die WCAG 2.0 pyramidenartig aufgebaut und umfassen vier Ebenen:
+\begin{enumerate}
+  \item 4 Prinzipien
+  \item 12 Richtlinien
+  \item 61 Erfolgskriterien
+  \item unzählige Techniken
+\end{enumerate}
+Die ersten drei Ebenen stellen einen Maßstab und das Fundament der Richtlinien
+dar. Im Gegensatz umfasst die vierte Ebene ergänzende Dokumente, die nicht
+normativ sind und regelmäßig aktualisiert werden.
+Im folgenden werden die Prinzipen und Richtlinien genauer betrachtet:
+\begin{enumerate}
+  \item Prinzip: Wahrnehmbar - Informationen und Bestandteile der
+  Benutzerschnittstellen müssen den Benutzer so präsentiert werden, dass
+  diese sie wahrnehmen können.
+  \begin{itemize}
+    \item Richtlinie 1.1 Textalternativen: Stellen Sie Textalternativen für
+    alle Nicht-Text-Inhalte zur Verfügung, so dass in andere vom Benutzer
+    benötigte Formen geändert werden können, wie zum Beispiel Großschrift,
+    Braille, Symbole oder einfachere Sprache.
+    \item Richtlinie 1.2 Zeitbasierte Medien: Stellen Sie Alternativen für
+    zeitbasierte Medien zur Verfügung.
+    \item Richtlinie 1.3 Anpassbar: Erstellen Sie Inhalte, die auf
+    verschiedene Arten dargestellt werden können (z.B. einfacheres Layout),
+    ohne dass Informationen oder Struktur verloren gehen.
+    \item Richtlinie 1.4 Unterscheidbar: Machen Sie es Benutzern leichter,
+    Inhalt zu sehen und zu hören einschließlich der Trennung von Vorder- und
+    Hintergrund.
+  \end{itemize}
+  \item Prinzip: Bedienbar - Bestandteile der Benutzerschnittstelle und
+  Navigation müssen bedienbar sein.
+  \begin{itemize}
+    \item Richtlinie 2.1 Per Tastatur zugänglich: Sorgen Sie dafür, dass alle
+    Funktionalitäten per Tastatur zugänglich sind.
+    \item Richtlinie 2.2 Ausreichend Zeit: Geben Sie den Benutzern ausreichend
+    Zeit, Inhalte zu lesen und zu benutzen.
+    \item Richtlinie 2.3 Anfälle: Gestalten Sie Inhalte nicht auf Arten, von
+    denen bekannt ist, dass sie zu Anfällen führen.
+    \item Richtlinie 2.4 Navigierbar: Stellen Sie Mittel zur Verfügung, um
+    Benutzer dabei zu unterstützen zu navigieren, Inhalte zu finden und zu
+    bestimmen, wo sie sich befinden.
+  \end{itemize}
+  \item Prinzip: Verständlich - Informationen und Bedienung der
+  Benutzerschnittstellen müssen verständlich sein.
+  \begin{itemize}
+    \item Richtlinie 3.1 Lesbar: Machen Sie Inhalte lesbar und verständlich.
+    \item Richtlinie 3.2 Vorhersehbar: Sorgen Sie dafür, dass Webseiten
+    vorhersehbar aussehen und funktionieren.
+    \item Richtlinie 3.3 Hilfestellung bei der Eingabe: Helfen Sie den
+    Benutzern dabei, Fehler zu vermeiden und zu korrigieren.
+  \end{itemize}
+  \item Prinzip: Robust - Inhalte müssen robust genug sein, damit sie
+  zuverlässig von einer großen Auswahl an Benutzeragenten einschließlich
+  assistierender Techniken interpretiert werden können.
+  \begin{itemize}
+    \item Richtlinie 4.1 Kompatibel: Maximieren Sie die Kompatibilität mit
+    aktuellen und zukünftigen Benutzeragenten, einschließlich assistierender
+    Techniken.
+  \end{itemize}
+\end{enumerate}
+Im Vergleich HTML5 und Adobe Flash ist es verständlich, dass die
+Webtechnologie HTML einen Vorteil daraus zieht, dass die aufgezeigten
+Richtlinien vor allem für das Erstellen von klassischen Webseiten gegeben
+wurden. Allerdings bietet auch Adobe Flash verschiedene Möglichkeiten, um
+diese Richtlinien erfüllen zu können. Diese sind jedoch mit deutlich höherem
+Aufwand verbunden, als es bei HTML der Fall ist. Dieses Problem ist nicht nur
+auf Adobe Flash beschränkt, sondern umfasst auch andere im Web verwendete
+Technologien und Programmiersprachen, die bei der Umsetzung der Richtlinien für
+Barrierefreiheit Schwierigkeiten bereiten. Das hat zur Folge, dass zum
+Beispiel blinde Menschen große Schwierigkeiten bei der Nutzung von Nicht-HTML
+Inhalten haben, da diese nicht von z.B. Screenreadern verarbeitet werden
+können.
+\newline\newline
+Mit den aktuellen Versionen des Adobe Flash Players und der ActionScript
+Version 3 bietet Adobe Entwicklern neue Möglichkeiten, um dem Nutzer
+alternative Inhalte anzubieten. Grundsätzlich sind die Möglichkeiten dabei
+ähnlich denen von HTML5. Damit wären barrierefreie Webseiten beziehungsweise
+Anwendungen durchaus auch mit Adobe Flash umsetzbar. Trotzdem bleibt die
+Umsetzung der Richtlinien des W3C ein schwieriges Unterfangen und ist deutlich
+aufwändiger und somit auch teurer, sodass häufig darauf verzichtet wird.
+\newline\newline
+Es zeigt sich aus dem Vergleich HTML5 und Adobe Flash und bei der Betrachtung
+der durch die W3C empfohlenen Richtlinien, dass Barrierefreiheit im Internet
+nicht eine Frage der eingesetzten Technologie/n sondern der vorhandenen
+Ressourcen (Zeit, Geld, Mitarbeiter, \dots) ist.
+
+% Beispiele für Barrierefreien Code HTML5/Flash
+
+\subsection{Suchmaschinenoptimierung}
+Der Bereich der Suchmaschinenoptimierung hat sich in den letzten Jahren
+enorm entwickelt. Kaum eine Webseite, unabhängig ob privat oder kommerziell
+genutzt, kommt ohne sie aus. Das liegt vorwiegend daran, dass Suchmaschinen
+wie Google, Yahoo oder Bing dem Nutzer die Suche nach interessanten und
+relevanten Inhalte vereinfachen. Die Suchmaschinenoptimierung spielt dabei
+insofern eine gewichtige Rolle, dass für viele Nutzer nur die Suchergebnisse
+auf der ersten Seite relevant sind. Oft wird der Suchstring angepasst bevor
+überhaupt Ergebnisse auf der zweiten oder dritten Ergebnisseite in Betracht
+gezogen werden. Somit ist es für den Betreiber einer Webseite wichtig, dass
+seine Webseite möglichst weit vorne im Suchmaschinenindex auftaucht.
+\newline\newline
+Inhalte die mit Adobe Flash erstellt wurden, haben einen großen
+Nachteil: Crawler und Spider (die für die Indizierung und Bewertung der
+Webseiten zuständig sind) können diese nicht oder nur sehr schwer lesen und
+daher auch nicht indizieren. Die Indizierung ist allerdings notwendig, um
+überhaupt auf einer Suchergebnisseite gelistet zu werden. Demzufolge ist es
+nachvollziehbar, dass Webseiten und Inhalte, die auf Flash basieren, nicht in
+das Ranking von Suchmaschinen mit aufgenommen werden. Die
+Suchmaschinenbetreiber suchen immer wieder nach einer Lösung zu diesem
+Problem. Die jüngsten Ergebnisse sind das Auslesen von Texten und Links aus
+Flash-Daten oder externen Quellen wie XML-Dateien, die die Inhalte für die
+Flash-Seiten beinhalten. Trotz allem ist die Indizierung bei Flash bei weitem
+nicht so effektiv wie bei HTML. Bei einer multimedialen Flash-Anwendung ist
+es zum Beispiel nicht möglich Bilder, Video- oder Audioinhalte und deren
+Bedeutung zu extrahieren und die Zuordnung von Unterseiten zur Navigation der
+Webseite ist nur äußerst umständlich über das sogenannte Deeplinking möglich.
+Wobei dieses Problem auch bei anderen Webtechnologien, wie zum Beispiel AJAX,
+mit dessen Hilfe Inhalte in die aktuell geöffnete Webseite nachgeladen werden
+können, bestehen.
+\newline\newline
+Bei der Verwendung von Adobe Flash und der Suchmaschinenoptimierung bietet
+Google einige Ratschläge, die helfen sollen: Suchmaschinen-Robotern sollen
+stehts Zugriff auf die selben Inhalte wie die Nutzer haben. Das bedeutet,
+dass keine zusätzlichen Inhalte aussschließlich für Crawler und Spider zur
+Verfügung gestellt werden sollen. Die Angabe von Informationen die nur von
+Suchmaschinen-Robotern gelesen werden können nennt man Cloaking. Grob
+umschrieben gibt man den Robotern dabei vor etwas zu sein was man nicht ist.
+Weitere Empfehlungen von Google sind, auf die Erstellung von vollständig
+auf Flash basierenden Webseiten zu verzichten und stattdessen gezielt
+einzelne Flash-Inhalte, zum Beispiel Videos, in eine HTML Seite zu
+integrieren. Eine Alternative dazu wäre die gewünschten Inhalte sowohl mit
+HTML5 als auch mit Adobe Flash zu erstellen, womit die Roboter die
+HTML-Version indizieren können und die Nutzer die eventuell besser
+aufbereitete Flash-Version besuchen können.
+\newline\newline
+Das ein Suchmaschinenbetreiber seinen Nutzern Ratschläge bei der Erstellung
+von Flash-Inhalten bereitstellt, zeigt wie umständlich es sein kann, diese für
+Suchmaschinen zu optimieren. Für eine möglichst erfolgreiche Optimierung
+der Suchergebnisse sollte stets ein externes Datenformat wie HTML oder
+XML eingesetzt werden. Damit ist es wesentlich einfacher, ein optimales
+Suchmaschinenergebnis zu erhalten. Auch multimediale Inhalte können
+durch einfache Mittel mit Bedeutung versehen werden, die wiederum für die
+Crawler und Spider einfach verständlich sind. Unter anderem sind die weiteren
+Vorteile bei der Nutzung von HTML die Möglichkeit, Hyperlinks unterschiedlich
+stark zu bewerten, Meta-Attribute wie Stichwörter und/oder eine Beschreibung
+der Seite anzugeben und damit eine differenziertere Indizierung zu erreichen
+und somit ein deutlich besseres Ergebnis bei Suchmaschinen zu erreichen.
+\newline\newline
+Ist es für den Betreiber einer Webseite wichtig, im Ranking von Suchmaschinen
+weit vorne zu liegen, führt fast kein Weg an HTML vorbei. Adobe Flash Inhalte
+können, wie sich gezeigt hat, auch indiziert werden, allerdings sind deren
+Relevanz für Suchmaschinen nie so hoch wie die von HTML Inhalten.
+Mit der neuen Version von HTML stehen nun noch mehr Möglichkeiten zum Einbinden
+von multimedialen und interaktiven Inhalten zur Verfügung, die wiederum
+eine optimale Alternative für die Optimierung von Suchmaschinenergebnissen
+genutzt werden können.
+
+%Die neuen Möglichkeiten der neuen HTML-Version bieten dabei viele Vorteile bei
+%der Suchmaschinenoptimierung wie zum Beispiel die Alternativen zur Einbindung
+%von multimedialen und interaktiven Inhalten.
+
+\subsection{Schnittstellen}
+HTML5 und Adobe Flash sind mächtige Entwicklertools, welche die Realisierung
+komplexer Anwendungen ermöglichen. Dennoch ist es mittlerweile im Internet
+notwendig, dass Schnittstellen zu anderen Technologien entweder bereits
+vorhanden oder zumindest realisierbar sind. Technologien, die oft in einem
+Verbund verwendet werden, sind Datenbanken (SQL), Auszeichnungs- und
+Austauschsprachen wie XML oder JSON oder Programmiersprachen wie PHP oder
+JAVA.
+\newline\newline
+Da HTML5 eine Auszeichnungssprache und keine Programmiersprache ist, können
+Inhalte und Daten aus anderen Technologien nur dargestellt werden. Mit
+Hilfe von JavaScript lassen sich diese Daten allerdings auch verarbeiten.
+Demnach ist im Fall von HTML5 nicht die Frage, ob die Technologie ausreichende
+Schnittstellen bietet, sondern ob es genügend Möglichkeiten zur Integration
+verschiedener andersartiger Technologien bietet und ob diese Technologien
+auf JavaScript-Aufrufe reagieren können. Daher müssen die Daten der
+eigesetzten Technologie so aufbereitet werden, dass sie mittels HTML
+dargestellt werden können, zum Beispiel als Text, Bild oder sonstigen
+multimedialen Inhalt.
+\newline\newline
+Adobe Flash bietet ebenfalls Möglichkeiten für den Austausch von Daten
+zwischen verschiedenen Technologien an. Allerdings müssen, wie bei HTML5,
+sämtliche Daten im Voraus aufbereitet werden um innerhalb von Flash
+verarbeitet und dargestellt werden zu können. Mit der, in Flash integrierten
+Programmiersprache ActionScript, lassen sich die Daten in vielfältigerer
+Weise weiterverarbeiten, als es mit purem HTML5 möglich wäre. Dennoch kann
+mit Flash nicht direkt auf andere Technologien zugegriffen werden.
+
+%\section{Vergleich von HTML5 Canvas und Adobe Flash}
+%Proprietär vs Standard
+%\subsection{Verfügbarkeit}
+%\subsection{Audio und Video}
+%\subsection{Animation}
+%\subsection{Spiele}
+%\subsection{Werbung}
+%\subsection{Web-Applikationen}
+
+%\section{Mögliche Auswirkungen}
+%\subsection{Der Wandel von dem allgegenwärtigen Flash zu den neuen Webstandards}
+%\subsection{Die Zukunft von HTML5 und Flash}
+%\subsection{Unternehmen und ihre Einstellung zu neuen Ideen}
+
+%\chapter{Auswirkungen}
+%\section{Browser}
+%\subsection{Chrome und Safari (WebKit)}
+%Chrome von Google und Safari von Apple bauen beide auf der HTML-Rendering-Engine
+%WebKit zur Darstellung von Webinhalten auf. Google Chrome konnte zunehmend mit
+%dem bis dato meist genutzen Webbrowser Internet Explorer konkurrieren, bis es
+%nach den Angaben des globalen Statistiksunternehmens StatCounter erstmals im Mai
+%2012, weltweit die Spitzenposition einnehmen konnte. Mit einem
+%durchschnittlichen Anteil von 35\% für Google Chrome und 7\% für Apple Safari
+%stellen diese die beliebtesten Webbrowser dar.
 % http://gs.statcounter.com/#browser-ww-monthly-201204-201304-bar
-Im Vergleich decken beide Browser den größten Teil der HTML5 Unterstützung ab.
+%Im Vergleich decken beide Browser den größten Teil der HTML5 Unterstützung ab.
 % Vergleiche HTML5 Unterstützung - http://html5readiness.com/
 
-Die WebKit Engine wurde auf der Grundlage des KDE-Projekts KHTML als Open Source
-Projekt von Apple entwickelt. Apple ist sehr daran interessiert, dass HTML5 so
-schnell wie möglich auf allen Geräten verfügbar ist, um den Benutzern ein
-uneingeschränktes Internet anbieten zu können. Auch die Mobile Safari Variante
-auf den iDivices basieren auf der WebKit-Engine.
+%Die WebKit Engine wurde auf der Grundlage des KDE-Projekts KHTML als Open Source
+%Projekt von Apple entwickelt. Apple ist sehr daran interessiert, dass HTML5 so
+%schnell wie möglich auf allen Geräten verfügbar ist, um den Benutzern ein
+%uneingeschränktes Internet anbieten zu können. Auch die Mobile Safari Variante
+%auf den iDivices basieren auf der WebKit-Engine.
 
-\subsection{Firefox (Gecko)}
-Der Open Source Webbrowser Firefox von Mozilla stellt im deutschsprachigen Raum
-den meist genutzten Webbrowser dar. Weltweit betrachtet befindet sich Firefox
-mit einem durchschnittlichen Anteil von 23\% hinter dem Internet Explorer von
-Microsoft und Google Chrome.
-Mozilla zeichnete sich schon früh als Unterstützer des HTML5 Standards ab. So
-war es schon mit sehr frühen Versionen von Firefox möglich, das Video-Element zu
-nutzen.
+%\subsection{Firefox (Gecko)}
+%Der Open Source Webbrowser Firefox von Mozilla stellt im deutschsprachigen Raum
+%den meist genutzten Webbrowser dar. Weltweit betrachtet befindet sich Firefox
+%mit einem durchschnittlichen Anteil von 23\% hinter dem Internet Explorer von
+%Microsoft und Google Chrome.
+%Mozilla zeichnete sich schon früh als Unterstützer des HTML5 Standards ab. So
+%war es schon mit sehr frühen Versionen von Firefox möglich, das Video-Element zu
+%nutzen.
 
-\subsection{Internet Explorer (Trident)}
-Der wohl bekannteste Webbrowser Internet Explorer von Microsoft ist bereits in
-der zehnten Version veröffentlicht worden. Schon mit dem Internet Explorer 9 war
-Microsoft darauf bedacht die Geschwindigkeit ihres Browsers zu verbessern und es
-wurde darauf verzichtet, eigene Standards durchzusetzen.
-Erstmals orientierte man sich gänzlich an den Spezifikationen und unterstütze
-bereits einige HTML5 Features.
-So wurde das Audio/Video-Element unterstützt, wobei nur auf proprietäre Codecs
-wie H.264 und MP3/AAC zurückgegriffen wurde. Seit dem Internet Explorer 10 wird
-auch der freie Codec WebM unterstützt.
+%\subsection{Internet Explorer (Trident)}
+%Der wohl bekannteste Webbrowser Internet Explorer von Microsoft ist bereits in
+%der zehnten Version veröffentlicht worden. Schon mit dem Internet Explorer 9 war
+%Microsoft darauf bedacht die Geschwindigkeit ihres Browsers zu verbessern und es
+%wurde darauf verzichtet, eigene Standards durchzusetzen.
+%Erstmals orientierte man sich gänzlich an den Spezifikationen und unterstütze
+%bereits einige HTML5 Features.
+%So wurde das Audio/Video-Element unterstützt, wobei nur auf proprietäre Codecs
+%wie H.264 und MP3/AAC zurückgegriffen wurde. Seit dem Internet Explorer 10 wird
+%auch der freie Codec WebM unterstützt.
 
-Microsoft hatte sich aus seinem größten Manko einen Vorteil verschafft: Dadurch,
-das der Internet Explorer nur auf Windows Geräten läuft, kann er die ganze
-Plattform und Hardware nutzen. Im Gegensatz zur Browsersoftware der Konkurrenz,
-die auf den kleinsten gemeinsamen Nenner zurückgreifen müssen.
-So kann Internet Explorers JavaScript Engine Chakra, die Leistung von Multicore
-Prozessoren ausnutzen.
+%Microsoft hatte sich aus seinem größten Manko einen Vorteil verschafft: Dadurch,
+%das der Internet Explorer nur auf Windows Geräten läuft, kann er die ganze
+%Plattform und Hardware nutzen. Im Gegensatz zur Browsersoftware der Konkurrenz,
+%die auf den kleinsten gemeinsamen Nenner zurückgreifen müssen.
+%So kann Internet Explorers JavaScript Engine Chakra, die Leistung von Multicore
+%Prozessoren ausnutzen.
 
-Mit dem Internet Explorer 10 hat Microsoft einiges aus der Vergangenheit
-aufgeholt, allerdings sollten diese neuen Features nicht überbewertet werden,
-denn die Einsatzfähigkeit von HTML5 zeichnet sich weniger durch die neuen
-Browser, sonder viel mehr durch die Anzahl an veralteten Browser aus. Solange
-die alten Versionen des Internet Explorer im Gebrauch sind können viele
-Neuheiten von HTML5 nicht sinnvoll und ohne Fallbacklösung verwendet werden.
+%Mit dem Internet Explorer 10 hat Microsoft einiges aus der Vergangenheit
+%aufgeholt, allerdings sollten diese neuen Features nicht überbewertet werden,
+%denn die Einsatzfähigkeit von HTML5 zeichnet sich weniger durch die neuen
+%Browser, sonder viel mehr durch die Anzahl an veralteten Browser aus. Solange
+%die alten Versionen des Internet Explorer im Gebrauch sind können viele
+%Neuheiten von HTML5 nicht sinnvoll und ohne Fallbacklösung verwendet werden.
